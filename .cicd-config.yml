@@ -10,3 +10,4 @@ deploy_targets:
   dev: vercel
   preview: vercel
 
+db: none 
