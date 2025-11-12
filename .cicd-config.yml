@@ -1,0 +1,12 @@
+project_type: static
+slug: regiofoods
+port: 3000
+
+domains:
+  prod: regiofoods.in
+
+deploy_targets:
+  main-hetz: hetzner
+  dev: vercel
+  preview: vercel
+

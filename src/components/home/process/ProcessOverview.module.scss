@@ -1,0 +1,211 @@
+/* ============================
+   ProcessOverview.module.scss
+   ============================ */
+
+.section {
+  width: 100%;
+  padding: clamp(48px, 8vw, 96px) 0;
+  background: linear-gradient(180deg, #0b0b0b 0%, #121212 100%);
+  color: var(--color-text);
+}
+
+/* Header */
+.header {
+  max-width: var(--max-content-width);
+  margin: 0 auto clamp(24px, 4vw, 40px);
+  padding: 0 var(--gutter);
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4em;
+}
+
+.header h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+.header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.subheading {
+  max-width: 68ch;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.05rem);
+}
+
+/* Grid */
+.grid {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(14px, 2.5vw, 24px);
+}
+
+.icons .card,
+.photos .card {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .icons .card,
+  .photos .card {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 720px) {
+  .icons .card,
+  .photos .card {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Base card */
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: clamp(18px, 2.8vw, 24px);
+  overflow: clip;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-border));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .08);
+}
+
+/* Icon flavour */
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+
+  background: color-mix(in oklab, var(--color-primary) 14%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, var(--color-border));
+
+  svg {
+    width: 26px;
+    height: 26px;
+    color: var(--color-primary);
+  }
+}
+
+/* Photo flavour */
+.cardPhoto {
+  padding: 0;
+  display: grid;
+  grid-template-rows: 160px auto;
+
+  /* glassy look on dark bg */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cardPhoto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(224, 54, 46, 0.25);
+}
+
+@media (min-width: 720px) {
+  .cardPhoto {
+    grid-template-rows: 180px auto;
+  }
+}
+
+.photoWrap {
+  position: relative;
+  min-height: 160px;
+}
+.photoWrap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.03);
+}
+.photoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.22));
+  pointer-events: none;
+}
+
+.cardBody {
+  padding: clamp(16px, 2.4vw, 22px);
+}
+
+/* Titles & text */
+.cardTitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cardDesc {
+  color: var(--color-text-muted);
+  font-size: 0.98rem;
+}
+
+/* Links */
+.cardLink {
+  margin-top: 12px;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.cardLink:hover {
+  color: var(--color-primary-hover, var(--color-primary));
+  text-decoration: underline;
+}
+
+/* Section CTA */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,.04);
+  box-shadow: 0 10px 28px rgba(226, 59, 46, 0.25);
+  transition: transform 150ms ease, background 200ms ease;
+}
+.ctaButton:hover {
+  transform: translateY(-1px);
+  background: var(--color-primary-hover, var(--color-primary));
+}
