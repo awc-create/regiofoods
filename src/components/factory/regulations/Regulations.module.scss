@@ -1,0 +1,150 @@
+/* src/components/factory/regulations/Regulations.module.scss */
+
+.section {
+  padding: clamp(48px, 8vw, 96px) 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+  color: var(--color-text);
+}
+
+.inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copy {
+  align-self: center;
+}
+
+/* Eyebrow and heading */
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.3vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.lead {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.4rem;
+}
+
+/* Points list */
+
+.points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.points li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 0.7rem;
+}
+
+.bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary);
+  position: relative;
+  margin-top: 0.22rem;
+}
+.bullet::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.points h3 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.points p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* Right panel */
+
+.panel {
+  align-self: stretch;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--color-border);
+  padding: clamp(18px, 3vw, 24px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.panelTitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.badge {
+  border-radius: 14px;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface-muted);
+  border: 1px solid var(--color-border);
+}
+
+.badgeLabel {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.badge p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.footerNote {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* On smaller screens, give the panel a bit more breathing room */
+@media (max-width: 900px) {
+  .panel {
+    order: -1;
+  }
+}
