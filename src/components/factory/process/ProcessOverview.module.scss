@@ -1,8 +1,8 @@
-/* src/components/factory/process/ProcessOverview.module.scss */
-
 .section {
   padding: clamp(48px, 8vw, 96px) 0;
-  background: #ffffff;
+  background:
+    radial-gradient(140% 220% at 0% 0%, #ffe9da 0%, #fff6ef 45%, #ffffff 75%),
+    #ffffff;
   color: var(--color-text);
 }
 

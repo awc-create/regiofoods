@@ -1,0 +1,367 @@
+.section {
+  padding: clamp(50px, 6vw, 90px) 0;
+  background: #faf8f5;
+}
+
+/* HEADER */
+
+.header {
+  max-width: var(--max-content-width);
+  margin: 0 auto clamp(24px, 4vw, 40px);
+  padding: 0 var(--gutter);
+  display: grid;
+  gap: 1.8rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin-bottom: 0.3rem;
+}
+
+.subheading {
+  max-width: 42rem;
+  color: var(--color-text-muted);
+}
+
+/* TOP BAR LAYOUT (filters + search + per-page) */
+
+.topBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/* FILTER GRID */
+
+.filterGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.parentWrap {
+  position: relative;
+}
+
+.parentChip {
+  border-radius: 999px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.parentChip:hover {
+  background: #f2f2f2;
+}
+
+.activeParent {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(226, 59, 46, 0.25);
+}
+
+/* DROPDOWN */
+
+.childMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  padding: 0.6rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: none;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+  z-index: 40;
+}
+
+.parentWrap:hover .childMenu {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.childChip {
+  padding: 0.45rem 0.8rem;
+  background: #f7f7f7;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  text-align: left;
+  transition: 0.15s;
+}
+
+.childChip:hover {
+  background: #ededed;
+}
+
+.activeChild {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Search + per-page group */
+
+.searchGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.searchBox {
+  position: relative;
+  min-width: 260px;
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: #ffffff;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.88rem;
+  outline: none;
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background 0.16s ease;
+}
+
+.searchInput:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 50%, transparent);
+  background: #ffffff;
+}
+
+/* Per-page selector pill */
+
+.perPage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.8rem;
+}
+
+.perPageLabel {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.perPageSelect {
+  border: none;
+  background: transparent;
+  font-size: 0.84rem;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.perPageSuffix {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* PRODUCT GRID */
+
+.grid {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+
+.card {
+  background: #fff;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding-bottom: 18px;
+  display: grid;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.09);
+}
+
+/* IMAGE */
+
+.imageWrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  background: #f2f2f2;
+}
+
+.imageWrap img {
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE + META */
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0 16px;
+}
+
+.metaLine {
+  color: #666;
+  font-size: 0.85rem;
+  padding: 0 16px;
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* CTA */
+
+.moreBtn {
+  padding: 0 16px;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Empty state */
+
+.emptyState {
+  grid-column: 1 / -1;
+  padding: 18px 16px;
+  border-radius: 16px;
+  border: 1px dashed rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Pagination */
+
+.paginationBar {
+  max-width: var(--max-content-width);
+  margin: clamp(20px, 4vw, 28px) auto 0;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginationMeta {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+}
+
+.paginationMeta strong {
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pageButton {
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: #ffffff;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.12s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.pageButton:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.pageButtonActive {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 22px rgba(226, 59, 46, 0.28);
+}
+
+@media (max-width: 768px) {
+  .searchBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .paginationBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

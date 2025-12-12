@@ -1,25 +1,28 @@
+// src/app/factory/FactoryClient.tsx
 'use client';
 
+import Hero from '@/components/about/hero/Hero';
+import Story from '@/components/about/story/Story';
+import Values from '@/components/about/values/Values';
+import Team from '@/components/about/team/Team';
+import Pillars from '@/components/about/pillars/Pillars';
+import Timeline from '@/components/about/timeline/Timeline';
+import Community from '@/components/about/community/Community';
+import Contact from '@/components/about/contact/Contact';
+
 import styles from './About.module.scss';
-import dynamic from 'next/dynamic';
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
-import developerAnim from '../../assets/lottie/developer.json'; // adjust path if needed
 
 export default function AboutClient() {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.left}>
-        <h1>About Us</h1>
-        <p>We&#39;re a team of passionate developers turning ideas into reality.</p>
-        <ul>
-          <li>🚀 Fast & scalable</li>
-          <li>🎨 Design-driven</li>
-          <li>🤝 Client-focused</li>
-        </ul>
-      </div>
-      <div className={styles.right}>
-        <Lottie animationData={developerAnim} loop autoplay style={{ height: 300 }} />
-      </div>
+    <div className={styles.page}>
+      <Hero />
+      <Story />
+      <Values />
+      <Team />
+      <Pillars />
+      <Timeline />
+      <Community />
+      <Contact />
     </div>
   );
 }

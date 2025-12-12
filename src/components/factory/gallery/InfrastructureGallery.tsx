@@ -72,9 +72,10 @@ export default function InfrastructureGallery() {
                 src={area.image}
                 alt={area.title}
                 fill
-                sizes="(min-width: 1024px) 33vw, 100vw"
+                sizes="(min-width: 1200px) 30vw, (min-width: 768px) 45vw, 100vw"
               />
             </div>
+
             <figcaption className={styles.caption}>
               <h3 className={styles.title}>{area.title}</h3>
               <p className={styles.text}>{area.caption}</p>
@@ -82,6 +83,11 @@ export default function InfrastructureGallery() {
           </figure>
         ))}
       </div>
+
+      <p className={styles.footerNote}>
+        As the facility expands with new equipment and lines, this gallery will be updated with
+        fresh photography for buyers and auditors.
+      </p>
     </section>
   );
 }

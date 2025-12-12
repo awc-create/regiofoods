@@ -1,0 +1,138 @@
+.section {
+  padding: clamp(60px, 9vw, 110px) 0 clamp(40px, 8vw, 70px);
+  background: #faf7f3; /* soft neutral */
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--color-text);
+}
+
+.inner {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COPY SIDE */
+
+.eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 0.7rem;
+}
+
+.lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1.4rem;
+}
+
+/* CHIPS */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.chip {
+  padding: 0.38rem 0.85rem;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.82rem;
+}
+
+/* META ROW */
+
+.metaRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .metaRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metaLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metaValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* SIDE CARD */
+
+.sideCard {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: grid;
+  gap: 1rem;
+}
+
+.sideEyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.stats {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.stats div {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.stats div:last-child {
+  border-bottom: none;
+}
+
+.stats dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.sideNote {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+}

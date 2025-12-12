@@ -1,4 +1,3 @@
-// src/components/factory/hero/Hero.tsx
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 
@@ -22,7 +21,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Factory & Infrastructure</p>
+        <p className={styles.eyebrow}>Factory &amp; Infrastructure</p>
 
         <h1 className={styles.title}>
           Built for export-grade production,
@@ -38,7 +37,7 @@ export default function Hero() {
 
         <div className={styles.chips}>
           <span className={styles.chip}>Food safety engineered in</span>
-          <span className={styles.chip}>Fire & emergency systems</span>
+          <span className={styles.chip}>Fire &amp; emergency systems</span>
           <span className={styles.chip}>Cold chain from cook to dispatch</span>
         </div>
 
@@ -47,7 +46,7 @@ export default function Hero() {
             View process overview
           </a>
           <a href="#safety-standards" className={styles.secondaryCta}>
-            Safety & compliance standards
+            Safety &amp; compliance standards
           </a>
         </div>
 

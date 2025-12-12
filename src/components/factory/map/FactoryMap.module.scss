@@ -2,7 +2,10 @@
 
 .section {
   padding: clamp(48px, 8vw, 96px) 0;
-  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
+  background:
+    radial-gradient(130% 220% at 0% 100%, #f0f4ff 0%, #ffffff 55%),
+    radial-gradient(130% 220% at 0% 0%, #fff3e7 0%, transparent 55%),
+    #ffffff;
   color: var(--color-text);
 }
 
