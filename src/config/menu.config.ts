@@ -5,5 +5,6 @@ export const NAV_LINKS: NavLink[] = [
   { slug: 'about', label: 'About' },
   { slug: 'products', label: 'Products' },
   { slug: 'factory', label: 'Factory' },
+  { slug: 'brands', label: 'Brands' },
   { slug: 'contact', label: 'Contact' },
 ];

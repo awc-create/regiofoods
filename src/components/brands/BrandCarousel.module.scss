@@ -1,0 +1,158 @@
+.section {
+  padding: clamp(44px, 6vw, 84px) 0;
+}
+
+/* Header */
+.header {
+  max-width: var(--max-content-width);
+  margin: 0 auto 16px;
+  padding: 0 var(--gutter);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.55rem auto 0;
+  max-width: 64ch;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Carousel viewport */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 0;
+
+  /* match your page background */
+  --carousel-bg: #ffffff;
+}
+
+/* ✅ NO BLACK fades */
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(120px, 14vw);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--carousel-bg), rgba(255, 255, 255, 0));
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--carousel-bg), rgba(255, 255, 255, 0));
+}
+
+/* Track – two sets sliding seamlessly */
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: scroll var(--speed, 22s) linear infinite;
+}
+
+/* Pause on hover */
+.carousel:hover .track,
+.carousel:focus-within .track {
+  animation-play-state: paused;
+}
+
+/* Each set is one full copy of the 4 logos */
+.set {
+  display: flex;
+  align-items: center;
+  gap: clamp(26px, 4vw, 84px);
+  padding: 0 clamp(18px, 4vw, 64px);
+}
+
+/* wrappers */
+.logoWrap,
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ✅ pointer only for linked logos */
+.logoLink {
+  cursor: pointer;
+}
+
+.logoLink:focus-visible {
+  outline: 2px solid rgba(226, 59, 46, 0.8);
+  outline-offset: 6px;
+  border-radius: 16px;
+}
+
+/* Logo block – no card, no container box */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: clamp(78px, 8vw, 110px);
+  min-width: clamp(170px, 22vw, 320px);
+}
+
+/* ✅ scale wrapper (this is why Keralites will scale now) */
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(var(--s, 1));
+  transform-origin: center;
+}
+
+.logoImg {
+  width: auto;
+  height: 100%;
+  max-height: clamp(78px, 8vw, 110px);
+  object-fit: contain;
+  display: block;
+
+  /* ✅ remove ALL shadows */
+  filter: none;
+  opacity: 1;
+}
+
+/* Seamless loop: move left by exactly one set width */
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+  .fadeLeft,
+  .fadeRight {
+    display: none;
+  }
+}
+
+/* Mobile: center and tighter */
+@media (max-width: 640px) {
+  .set {
+    gap: 22px;
+    padding: 0 18px;
+  }
+
+  .logo {
+    min-width: 220px;
+  }
+}

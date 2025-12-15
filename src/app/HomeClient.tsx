@@ -9,6 +9,7 @@ import MarketsServed from '@/components/home/markets/MarketsServed';
 import TestimonialsCarousel from '@/components/home/testimonials/TestimonialsCarousel';
 import ExportFootprint from '@/components/home/export/ExportFootprint';
 import ContactSection from '@/components/home/contact/ContactSection';
+import BrandCarousel from '@/components/brands/BrandCarousel';
 
 export default function HomeClient() {
   return (
@@ -94,6 +95,13 @@ export default function HomeClient() {
           },
         ]}
         cta={{ label: 'View all products', href: '/products' }}
+      />
+
+      {/* ✅ Brand credibility sits HERE */}
+      <BrandCarousel
+        title="Brands in the Prince Foods group"
+        subtitle="Named ranges manufactured and supplied across the portfolio."
+        speedSeconds={22}
       />
 
       <MarketsServed

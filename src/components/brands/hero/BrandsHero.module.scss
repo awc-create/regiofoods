@@ -1,0 +1,162 @@
+/* ============================================================
+   BRANDS HERO — Full viewport, light & structural
+   ============================================================ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100dvh - var(--navbar-height, 72px));
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #121316;
+
+  background:
+    radial-gradient(120% 90% at 18% -10%, rgba(226, 59, 46, 0.16) 0%, rgba(226, 59, 46, 0) 55%),
+    radial-gradient(120% 90% at 86% 10%, rgba(10, 18, 32, 0.10) 0%, rgba(10, 18, 32, 0) 60%),
+    linear-gradient(180deg, #fbfbfc 0%, #f3f4f6 100%);
+}
+
+/* Grid / structure overlay */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  opacity: 0.55;
+  background:
+    linear-gradient(to right, rgba(10, 18, 32, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 18, 32, 0.06) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: radial-gradient(70% 60% at 40% 30%, #000 0%, transparent 70%);
+}
+
+.hero::after {
+  opacity: 0.3;
+  background: radial-gradient(60% 50% at 60% 25%, rgba(226, 59, 46, 0.1) 0%, transparent 65%);
+}
+
+/* Content */
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  gap: 1.2rem;
+
+  padding-top: clamp(80px, 10vh, 160px);
+  padding-bottom: clamp(64px, 10vh, 140px);
+}
+
+.logoWrap {
+  margin-bottom: 0.5rem;
+
+  img {
+    display: block;
+    max-width: 140px;
+    height: auto;
+  }
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(18, 19, 22, 0.6);
+}
+
+.title {
+  font-size: clamp(2.6rem, 4.8vw, 3.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 52rem;
+  color: #0f1115;
+}
+
+.lead {
+  max-width: 56rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: rgba(18, 19, 22, 0.72);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.85rem 1.45rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.primary {
+  background: var(--color-primary, #e23b2e);
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(226, 59, 46, 0.25);
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 54px rgba(226, 59, 46, 0.3);
+}
+
+.secondary {
+  background: rgba(15, 17, 21, 0.04);
+  border: 1px solid rgba(15, 17, 21, 0.1);
+  color: #14161a;
+}
+
+.secondary:hover {
+  transform: translateY(-1px);
+  background: rgba(15, 17, 21, 0.06);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.32rem 0.8rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(15, 17, 21, 0.1);
+  color: rgba(18, 19, 22, 0.7);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100dvh;
+  }
+
+  .inner {
+    padding-top: 96px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 7vw, 2.8rem);
+  }
+}

@@ -34,11 +34,11 @@ type HeroMedia =
 interface Props {
   title: string;
   subtitle?: string;
-  eyebrow?: string; // small kicker above title
+  eyebrow?: string;
 
   /** New API */
-  media?: HeroMedia; // image or video (optional to allow back-compat)
-  ctas?: CTA[]; // any number of buttons
+  media?: HeroMedia;
+  ctas?: CTA[];
 
   /** Back-compat (deprecated) */
   bgSrc?: string;
@@ -46,12 +46,12 @@ interface Props {
   ctaSecondary?: { label: string; href: string };
 
   /** Options */
-  align?: 'center' | 'left'; // content alignment
-  overlay?: 'light' | 'medium' | 'dark'; // overlay strength
-  scrollTargetId?: string; // id to scroll to
-  showScrollCue?: boolean; // show chevron
+  align?: 'center' | 'left';
+  overlay?: 'light' | 'medium' | 'dark';
+  scrollTargetId?: string;
+  showScrollCue?: boolean;
 
-  /** Optional per-section metadata (page-level metadata still recommended) */
+  /** Optional per-section metadata */
   meta?: HeroMeta;
 }
 
@@ -61,22 +61,18 @@ export default function Hero(props: Props) {
     subtitle,
     eyebrow,
 
-    // new API
     media,
     ctas = [],
 
-    // legacy props (will be mapped)
     bgSrc,
     ctaPrimary,
     ctaSecondary,
 
-    // options
     align = 'center',
     overlay = 'medium',
     scrollTargetId,
     showScrollCue = true,
 
-    // meta
     meta,
   } = props;
 
@@ -91,8 +87,6 @@ export default function Hero(props: Props) {
           ...(ctaSecondary ? [{ ...ctaSecondary, variant: 'ghost' as const }] : []),
         ]
       : ctas;
-
-  // --------------------------------------------------------------
 
   const handleScrollClick = () => {
     if (!scrollTargetId) return;
@@ -151,8 +145,8 @@ export default function Hero(props: Props) {
                 src={resolvedMedia.src}
                 alt={resolvedMedia.alt ?? ''}
                 fill
-                priority
                 sizes="100vw"
+                priority={resolvedMedia.preload ?? false}
               />
             ) : (
               <video
@@ -183,7 +177,7 @@ export default function Hero(props: Props) {
             <div className={styles.ctaRow}>
               {resolvedCtas.map((cta) => (
                 <a
-                  key={cta.href + cta.label}
+                  key={`${cta.href}-${cta.label}`}
                   href={cta.href}
                   className={cta.variant === 'ghost' ? styles.secondaryBtn : styles.primaryBtn}
                 >
@@ -200,6 +194,7 @@ export default function Hero(props: Props) {
             className={styles.scrollDown}
             aria-label="Scroll to content"
             onClick={handleScrollClick}
+            type="button"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
