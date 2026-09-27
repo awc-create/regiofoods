@@ -30,43 +30,20 @@ export default function HomeClient() {
         }}
       />
 
-      <ProcessOverview
-        variant="photos"
-        heading="Built to Handle Quality at Scale"
-        subheading="From raw intake to blast freezing and primary packaging, every step is controlled, logged, and audited."
-        items={[
-          {
-            photo: '/assets/sections/dock.jpg',
-            title: 'Dock & Intake',
-            description: 'Controlled receiving with hygiene protocols and temperature checks.',
-            href: '/process-infrastructure#dock',
-          },
-          {
-            photo: '/assets/sections/coldroom.jpg',
-            title: 'Cold Storage',
-            description: 'Redundant cooling and continuous data logging for stable storage.',
-            href: '/process-infrastructure#cold',
-          },
-          {
-            photo: '/assets/sections/lab.jpg',
-            title: 'QA Lab',
-            description: 'TVC, coliforms, pathogens, moisture/salt—batch release only after pass.',
-            href: '/quality#lab',
-          },
-        ]}
-        cta={{ label: 'See infrastructure', href: '/process-infrastructure' }}
-      />
+      {/* 1. About */}
+      <div id="intro">
+        <AboutSection
+          imageSrc="/assets/sections/factory-wide.jpg"
+          stats={[
+            { label: 'Processing Capacity', value: 'High-Volume' },
+            { label: 'Quality Checks', value: 'Multi-Stage' },
+            { label: 'Dispatch', value: 'Export-Ready' },
+          ]}
+          cta={{ label: 'Read our story', href: '/about' }}
+        />
+      </div>
 
-      <AboutSection
-        imageSrc="/assets/sections/factory-wide.jpg"
-        stats={[
-          { label: 'Processing Capacity', value: 'High-Volume' },
-          { label: 'Quality Checks', value: 'Multi-Stage' },
-          { label: 'Dispatch', value: 'Export-Ready' },
-        ]}
-        cta={{ label: 'Read our story', href: '/about' }}
-      />
-
+      {/* 2. Products */}
       <ProductsShowcase
         items={[
           {
@@ -97,13 +74,42 @@ export default function HomeClient() {
         cta={{ label: 'View all products', href: '/products' }}
       />
 
-      {/* ✅ Brand credibility sits HERE */}
+      {/* 3. Brands */}
       <BrandCarousel
         title="Brands in the Prince Foods group"
         subtitle="Named ranges manufactured and supplied across the portfolio."
         speedSeconds={22}
       />
 
+      {/* 4. Factory / infrastructure */}
+      <ProcessOverview
+        variant="photos"
+        heading="Built to Handle Quality at Scale"
+        subheading="From raw intake to blast freezing and primary packaging, every step is controlled, logged, and audited."
+        items={[
+          {
+            photo: '/assets/sections/dock.jpg',
+            title: 'Dock & Intake',
+            description: 'Controlled receiving with hygiene protocols and temperature checks.',
+            href: '/factory',
+          },
+          {
+            photo: '/assets/sections/coldroom.jpg',
+            title: 'Cold Storage',
+            description: 'Redundant cooling and continuous data logging for stable storage.',
+            href: '/factory',
+          },
+          {
+            photo: '/assets/sections/lab.jpg',
+            title: 'QA Lab',
+            description: 'TVC, coliforms, pathogens, moisture/salt—batch release only after pass.',
+            href: '/factory',
+          },
+        ]}
+        cta={{ label: 'See infrastructure', href: '/factory' }}
+      />
+
+      {/* Markets & export reach */}
       <MarketsServed
         markets={[
           {
@@ -141,28 +147,6 @@ export default function HomeClient() {
         cta={{ label: 'Talk to our export team', href: '/contact' }}
       />
 
-      <TestimonialsCarousel
-        items={[
-          {
-            quote: 'Consistent quality and excellent cold-chain handling.',
-            author: 'A. Perera',
-            role: 'Procurement Lead',
-            company: 'Lanka Foods',
-          },
-          {
-            quote: 'Batch traceability and documentation are spot on for exports.',
-            author: 'R. Ali',
-            role: 'Director',
-            company: 'EuroMart Distributors',
-          },
-          {
-            quote: 'Ready-to-cook SKUs perform well in HORECA menus.',
-            author: 'Chef N. Menon',
-            company: 'Executive Chef',
-          },
-        ]}
-      />
-
       <ExportFootprint
         stats={[
           { value: '15+', label: 'Countries' },
@@ -186,7 +170,27 @@ export default function HomeClient() {
         note="Regions shown are representative and expanding based on distributor coverage."
       />
 
-      <ContactSection />
+      <TestimonialsCarousel
+        items={[
+          {
+            quote: 'Consistent quality and excellent cold-chain handling.',
+            author: 'A. Perera',
+            role: 'Procurement Lead',
+            company: 'Lanka Foods',
+          },
+          {
+            quote: 'Batch traceability and documentation are spot on for exports.',
+            author: 'R. Ali',
+            role: 'Director',
+            company: 'EuroMart Distributors',
+          },
+          {
+            quote: 'Ready-to-cook SKUs perform well in HORECA menus.',
+            author: 'Chef N. Menon',
+            company: 'Executive Chef',
+          },
+        ]}
+      />
 
       <CertificationsSection
         items={[
@@ -206,10 +210,8 @@ export default function HomeClient() {
         ]}
       />
 
-      {/* Placeholder below the fold so the scroll chevron lands somewhere */}
-      <section id="intro" style={{ padding: '64px 0' }}>
-        {/* You can replace this with your real sections later */}
-      </section>
+      {/* Contact */}
+      <ContactSection />
     </>
   );
 }

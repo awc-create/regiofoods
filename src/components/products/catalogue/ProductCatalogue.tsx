@@ -1,7 +1,7 @@
 // src/components/products/catalogue/ProductCatalogue.tsx
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import productsData from '@/data/products.json';
@@ -25,11 +25,32 @@ export type Product = {
 
 const PRODUCTS = productsData as Product[];
 
+// Order of the top-level category tabs
+const PARENT_ORDER = ['Frozen', 'Groceries', 'Snacks', 'Bakery', 'Beverages', 'Others'];
+
+const parentRank = (name: string) => {
+  const i = PARENT_ORDER.indexOf(name);
+  return i === -1 ? PARENT_ORDER.length : i;
+};
+
 export default function ProductCatalogue() {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [perPage, setPerPage] = useState<number>(16); // default 16
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [suggestOpen, setSuggestOpen] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // Close the product list when clicking outside the search box
+  useEffect(() => {
+    const onDown = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSuggestOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, []);
 
   // Parent → child categories map
   const parentMap = useMemo(() => {
@@ -44,7 +65,11 @@ export default function ProductCatalogue() {
       });
     });
 
-    return Object.fromEntries(Object.entries(map).map(([k, v]) => [k, Array.from(v).sort()]));
+    return Object.fromEntries(
+      Object.entries(map)
+        .sort(([a], [b]) => parentRank(a) - parentRank(b) || a.localeCompare(b))
+        .map(([k, v]) => [k, Array.from(v).sort()])
+    );
   }, []);
 
   // Filter + search in one memo so it's cheap & predictable
@@ -68,6 +93,14 @@ export default function ProductCatalogue() {
 
     return result;
   }, [activeFilter, searchTerm]);
+
+  // Alphabetical product list shown under the search box
+  const suggestions = useMemo(() => {
+    const q = searchTerm.trim().toLowerCase();
+    return [...PRODUCTS]
+      .filter((p) => !q || p.baseName.toLowerCase().includes(q))
+      .sort((a, b) => a.baseName.localeCompare(b.baseName));
+  }, [searchTerm]);
 
   // Pagination maths
   const totalItems = filteredProducts.length;
@@ -105,7 +138,7 @@ export default function ProductCatalogue() {
       <div className={styles.header}>
         <div>
           <p className={styles.eyebrow}>Catalogue</p>
-          <h2 className={styles.heading}>Browse the current frozen range.</h2>
+          <h2 className={styles.heading}>Browse our product range.</h2>
           <p className={styles.subheading}>
             These products are currently in production. Specifications and artwork can be tuned for
             private-label or regional requirements.
@@ -159,14 +192,46 @@ export default function ProductCatalogue() {
 
           {/* SEARCH + PER PAGE */}
           <div className={styles.searchGroup}>
-            <div className={styles.searchBox}>
+            <div className={styles.searchBox} ref={searchRef}>
               <input
                 className={styles.searchInput}
                 type="search"
-                placeholder="Search products…"
+                placeholder="Search or browse products…"
                 value={searchTerm}
-                onChange={(e) => handleSearchChange(e.target.value)}
+                onChange={(e) => {
+                  handleSearchChange(e.target.value);
+                  setSuggestOpen(true);
+                }}
+                onFocus={() => setSuggestOpen(true)}
+                onKeyDown={(e) => e.key === 'Escape' && setSuggestOpen(false)}
+                role="combobox"
+                aria-expanded={suggestOpen}
+                aria-controls="product-suggestions"
+                aria-autocomplete="list"
               />
+
+              {suggestOpen && (
+                <ul id="product-suggestions" className={styles.suggestList} role="listbox">
+                  <li className={styles.suggestMeta}>
+                    {suggestions.length} product{suggestions.length === 1 ? '' : 's'}
+                  </li>
+                  {suggestions.length === 0 && (
+                    <li className={styles.suggestEmpty}>No matching products</li>
+                  )}
+                  {suggestions.map((p) => (
+                    <li key={p.baseName} role="option" aria-selected={false}>
+                      <Link
+                        href={`/products/${slugify(p.baseName)}`}
+                        className={styles.suggestItem}
+                        onClick={() => setSuggestOpen(false)}
+                      >
+                        <span>{p.baseName}</span>
+                        <small>{p.parentCollection}</small>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <div className={styles.perPage}>

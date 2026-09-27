@@ -3797,16 +3797,16 @@
   {
     "baseName": "Prince Foods Achappam",
     "description": "Prince Foods Achappam is a traditional South Indian snack that brings together crispy, light, and golden treats perfect for any occasion. Also known as \"Muthus\" or \"Rose Cookies,\" Achappam is made from a simple yet flavorful batter of rice flour",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Achappam 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_80186fe312494fc8901ed59c6ecf47cd~mv2.jpg"
       }
     ]
@@ -3814,16 +3814,16 @@
   {
     "baseName": "Prince Foods Andhra Murukku",
     "description": "Prince Foods Andhra Murukku is a traditional snack made from rice flour, gram flour, and aromatic spices. Expertly fried to golden perfection, it delivers an irresistible crunch in every bite.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Andhra Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_617f57b7f07f4f66ae70f9ad8577fdc4~mv2.jpg"
       }
     ]
@@ -3831,16 +3831,16 @@
   {
     "baseName": "Prince Foods Banana chips",
     "description": "Prince Foods Banana Chips are a classic, crispy snack made from fresh, handpicked raw bananas, sliced thinly and fried to golden perfection.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Banana chips 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_f4a77e98a49d4c05836e2ebe4c38af8e~mv2.jpg"
       }
     ]
@@ -3848,16 +3848,16 @@
   {
     "baseName": "Prince Foods Banana chips cut",
     "description": "Prince Foods Banana Chips are a classic, crispy snack made from fresh, handpicked raw bananas, sliced thinly and fried to golden perfection.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Banana chips cut 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_f4a77e98a49d4c05836e2ebe4c38af8e~mv2.jpg"
       }
     ]
@@ -3865,16 +3865,16 @@
   {
     "baseName": "Prince Foods Butter Murukku",
     "description": "Prince Foods Butter Murukku is a rich, flavorful, and irresistibly crunchy snack that combines the traditional taste of Murukku with the creamy goodness of butter.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Butter Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_294e9d3d02204b4a834bcc261c7f2c10~mv2.jpg"
       }
     ]
@@ -3882,16 +3882,16 @@
   {
     "baseName": "Prince Foods Cassava Chips (Spicy)",
     "description": "Prince Foods Cassava Chips are a crispy, light, and flavorful snack made from high-quality cassava (yuca), sliced thin and fried to perfection.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Cassava Chips (Spicy) 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_c61db33837f746aa8f24c05d8528f9ab~mv2.jpeg"
       }
     ]
@@ -3899,16 +3899,16 @@
   {
     "baseName": "Prince Foods Cassava Stick (Spicy)",
     "description": "Prince Foods Cassava Stick is a crispy, savory snack made from high-quality cassava (also known as yuca or manioc), expertly sliced and fried to perfection. These golden, crunchy sticks offer a delightful texture with every bite.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Cassava Stick (Spicy) 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_de11853eb6fe47ae818288e44853af5c~mv2.jpg"
       }
     ]
@@ -3916,16 +3916,16 @@
   {
     "baseName": "Prince Foods Cheeda masala",
     "description": "Prince Foods Cheeda Masala 150g is a traditional Indian snack mix, offering a delightful combination of crispy elements and savory spices.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Cheeda masala 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_a926acde03f2456199d9e34f5c127b30~mv2.jpg"
       }
     ]
@@ -3933,16 +3933,16 @@
   {
     "baseName": "Prince Foods Cheeda sweet",
     "description": "Prince Foods Cheeda Sweet 150g is a traditional Indian snack made from rice flakes, sugar, and ghee, offering a delightful combination of sweetness and crunch.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Cheeda sweet 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_88f4c2d15c384f5aad2c72b8e085256a~mv2.jpg"
       }
     ]
@@ -3950,16 +3950,16 @@
   {
     "baseName": "Prince Foods Diamond cut sweet",
     "description": "Prince Foods Diamond Cut Sweet is a traditional Indian snack made from all-purpose flour (maida), sugar, and ghee.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Diamond cut sweet 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_272f23ffe6f34b9b92354b4b9fc8be05~mv2.jpg"
       }
     ]
@@ -3967,16 +3967,16 @@
   {
     "baseName": "Prince Foods Garlic Murukku",
     "description": "Prince Foods Garlic Muruku is a bold and savory snack that takes the classic Muruku to a whole new level with the rich, aromatic flavor of garlic.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Garlic Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_00f485f9adac4af099c6fc4b621d99b3~mv2.jpeg"
       }
     ]
@@ -3984,16 +3984,16 @@
   {
     "baseName": "Prince Foods Gingelly Balls",
     "description": "Prince Foods Gingelly Balls are a wholesome, delightful treat made from roasted sesame seeds (gingelly) and jaggery, creating a perfect balance of nutty, sweet, and crunchy flavors.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Peanut & Sesame Snacks"
     ],
     "variants": [
       {
         "name": "Prince Foods Gingelly Balls 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Peanut & Sesame Snacks",
         "image": "https://static.wixstatic.com/media/96bfc4_13568a133f7a495fb2e3c4c3693b7c0b~mv2.jpg"
       }
     ]
@@ -4001,16 +4001,16 @@
   {
     "baseName": "Prince Foods Golden Kalyani Murukku",
     "description": "Prince Foods Golden Kalyani Muruku is a luxurious and irresistibly crunchy snack that brings together the rich flavors of traditional South Indian Muruku with a unique, golden touch.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Golden Kalyani Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_526e991353e04dac95e54b8a41df206f~mv2.jpg"
       }
     ]
@@ -4018,22 +4018,22 @@
   {
     "baseName": "Prince Foods Jackfruit Chips",
     "description": "Prince Foods Jackfruit Chips are a delectable, crunchy snack made from thinly sliced, perfectly ripe jackfruit, which is then fried to golden perfection. These chips capture the natural sweetness and distinct flavor of jackfruit",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Jackfruit Chips 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_fe64473788184e52a6965a58c17dcd77~mv2.jpg"
       },
       {
         "name": "Prince Foods Jackfruit Chips 200g",
         "packSize": "200g",
-        "category": "Savouries Value Packs",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_06cfe6706acd4a4ab9f3f26827d9aae4~mv2.jpeg"
       }
     ]
@@ -4041,16 +4041,16 @@
   {
     "baseName": "Prince Foods Jeera Murukku",
     "description": "Prince Foods Jeera Muruku is a deliciously savory snack that combines the crispiness of traditional Muruku with the aromatic flavor of cumin (jeera).",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Jeera Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_9a489bd981c746e69c51c494ac4ea3c2~mv2.jpg"
       }
     ]
@@ -4058,16 +4058,16 @@
   {
     "baseName": "Prince Foods Kuzhalappam",
     "description": "Prince Foods Kuzhalappam is a traditional and flavorful South Indian snack that offers a perfect balance of crispiness and spice. Made from a mixture of rice flour, coconut, and select spices, this deep-fried treat is shaped into a distinctive tube-like form, giving it a unique texture and a satisfying crunch with every bite.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Kuzhalappam 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_2d5ccac1a1454c6fb8447fcdde35f8cc~mv2.jpg"
       }
     ]
@@ -4075,16 +4075,16 @@
   {
     "baseName": "Prince Foods Long Murukku",
     "description": "Prince Foods Long Muruku is a traditional and irresistible South Indian snack, crafted to deliver a perfect balance of crunch and flavor. Made from a blend of rice flour, urad dal flour, and carefully selected spices, this unique version of Muruku is shaped into long, crispy strands that are deep-fried to a golden brown.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Long Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_f6d892aea04a4c0f91370c6e8e0e863a~mv2.jpg"
       }
     ]
@@ -4092,16 +4092,16 @@
   {
     "baseName": "Prince Foods Madhuraseva",
     "description": "Prince Foods Madhuraseva is a delightful and crunchy snack that combines the perfect balance of sweetness and spice, offering a unique twist on traditional savory treats. Made from a blend of high-quality rice flour, urad dal flour, and carefully selected spices, Madhuraseva is deep-fried to a golden crisp and then coated with a light, sugary glaze.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Madhuraseva 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_3cc3b318d610437fb100fe899f05db25~mv2.jpg"
       }
     ]
@@ -4109,16 +4109,16 @@
   {
     "baseName": "Prince Foods Malabar Murukku",
     "description": "Prince Foods Malabar Muruku is a traditional and crunchy South Indian snack, packed with authentic flavors from the Malabar region",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Malabar Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_ba37782a4e6140329ae4ce675a5af55d~mv2.jpeg"
       }
     ]
@@ -4126,28 +4126,28 @@
   {
     "baseName": "Prince Foods Mixture",
     "description": "Prince Foods Mixture is a flavorful and crunchy snack that brings together a delightful mix of savory ingredients, perfect for satisfying your snack cravings.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Mixture 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_1d54ce15b51b4bb188b83152985efd64~mv2.jpg"
       },
       {
         "name": "Prince Foods Mixture 300g",
         "packSize": "300g",
-        "category": "Savouries Value Packs",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_4a7252ef4ed644f8b70257171aa818fc~mv2.jpg"
       },
       {
         "name": "Prince Foods Mixture 600g",
         "packSize": "600g",
-        "category": "Savouries Value Packs",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_202c2803d2d94263a877f76af9824917~mv2.jpg"
       }
     ]
@@ -4155,16 +4155,16 @@
   {
     "baseName": "Prince Foods Onion murukku",
     "description": "Prince Foods Onion Murukku 150g is a traditional South Indian snack made from rice flour and gram flour, seasoned with aromatic spices and fried to a crispy texture.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Onion murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_ecda58e15ca34b8d928ad82f837c06ba~mv2.jpg"
       }
     ]
@@ -4172,16 +4172,16 @@
   {
     "baseName": "Prince Foods Pakkavada",
     "description": "Prince Foods Pakkavada is a delicious, crispy, and savory snack that brings the authentic taste of South India to your table.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Mixtures & Traditional Savouries"
     ],
     "variants": [
       {
         "name": "Prince Foods Pakkavada 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Mixtures & Traditional Savouries",
         "image": "https://static.wixstatic.com/media/96bfc4_7d68cf4cd6b74a52a6e9989ae12d2b90~mv2.jpg"
       }
     ]
@@ -4189,16 +4189,16 @@
   {
     "baseName": "Prince Foods Peanut Ball",
     "description": "Prince Foods Peanut Ball is a delicious, crunchy, and sweet treat made from roasted peanuts and jaggery, expertly combined to create a perfect balance of nutty goodness and natural sweetness.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Peanut & Sesame Snacks"
     ],
     "variants": [
       {
         "name": "Prince Foods Peanut Ball 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Peanut & Sesame Snacks",
         "image": "https://static.wixstatic.com/media/96bfc4_a2ab9837dcea4596981c6159dcbdca12~mv2.jpg"
       }
     ]
@@ -4206,16 +4206,16 @@
   {
     "baseName": "Prince Foods Peanut Candy",
     "description": "Prince Foods Peanut Candy is a delightful and nostalgic treat that brings together the natural crunch of roasted peanuts and the sweetness of caramelized sugar, creating a perfect balance of flavors.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Peanut & Sesame Snacks"
     ],
     "variants": [
       {
         "name": "Prince Foods Peanut Candy 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Peanut & Sesame Snacks",
         "image": "https://static.wixstatic.com/media/96bfc4_6aac23c653a041c0a224af7180a67cba~mv2.jpg"
       }
     ]
@@ -4223,16 +4223,16 @@
   {
     "baseName": "Prince Foods Peanut Masala",
     "description": "Prince Foods Peanut Masalas is a flavorful and spicy snack made from high-quality roasted peanuts, generously coated with a zesty blend of aromatic spices and herbs. The peanuts are roasted to perfection, giving them a satisfying crunch, while the masala coating adds a burst of bold, savory, and tangy flavors.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Peanut & Sesame Snacks"
     ],
     "variants": [
       {
         "name": "Prince Foods Peanut Masala 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Peanut & Sesame Snacks",
         "image": "https://static.wixstatic.com/media/96bfc4_82a1d8d8bdf84ed696f91fc304055b80~mv2.jpg"
       }
     ]
@@ -4240,16 +4240,16 @@
   {
     "baseName": "Prince Foods Peanut Roast",
     "description": "Prince Foods Peanut Roast is a crunchy, savory snack made from high-quality roasted peanuts, expertly seasoned with a blend of spices that create a perfect balance of flavors.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Peanut & Sesame Snacks"
     ],
     "variants": [
       {
         "name": "Prince Foods Peanut Roast 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Peanut & Sesame Snacks",
         "image": "https://static.wixstatic.com/media/96bfc4_6e39385297324ac599b8fed9ca6e8758~mv2.jpg"
       }
     ]
@@ -4257,16 +4257,16 @@
   {
     "baseName": "Prince Foods Plantain chips",
     "description": "Prince Foods Plantain Chips 150g is a traditional snack made from thinly sliced plantains, fried to a crispy texture, and lightly salted for enhanced flavor.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Plantain chips 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_c85b743df57a481aade4f6e69066178f~mv2.jpg"
       }
     ]
@@ -4274,16 +4274,16 @@
   {
     "baseName": "Prince Foods Rice Murukku",
     "description": "Prince Foods Rice Muruku is a delicious and crispy snack that brings the authentic flavors of South Indian cuisine to your taste buds. Made from high-quality rice flour, urad dal flour, and a special blend of spices.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Rice Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_e225d10d31814e63b30c33f8a67e7aef~mv2.jpg"
       }
     ]
@@ -4291,16 +4291,16 @@
   {
     "baseName": "Prince Foods Spicy banana chips",
     "description": "Prince Foods Spicy Banana Chips (150g) offer a crunchy, flavorful snack made from thinly sliced raw bananas fried to golden perfection.Seasoned with a zesty blend of chili and spices.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Chips"
     ],
     "variants": [
       {
         "name": "Prince Foods Spicy banana chips 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Chips",
         "image": "https://static.wixstatic.com/media/96bfc4_c46afe51fbc448fa88911e91da394489~mv2.jpg"
       }
     ]
@@ -4308,16 +4308,16 @@
   {
     "baseName": "Prince Foods Spicy Kalyani Murukku",
     "description": "Prince Foods Spicy Kalyani Muruku is a bold, crispy, and flavorful snack that combines the traditional charm of South Indian Muruku with an extra punch of spice.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Spicy Kalyani Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_526e991353e04dac95e54b8a41df206f~mv2.jpg"
       }
     ]
@@ -4325,16 +4325,16 @@
   {
     "baseName": "Prince Foods Tomato Murukku",
     "description": "Prince Foods Tomato Muruku is a delicious, crispy snack that adds a flavorful twist to the traditional South Indian Muruku. Made from a blend of rice flour, urad dal flour, and tangy tomato powder, this savory snack offers a perfect balance of crunch and spice.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Buy 1 Get 1 Free"
+      "Snacks",
+      "Murukku"
     ],
     "variants": [
       {
         "name": "Prince Foods Tomato Murukku 150g",
         "packSize": "150g",
-        "category": "Savouries Buy 1 Get 1 Free",
+        "category": "Murukku",
         "image": "https://static.wixstatic.com/media/96bfc4_617f57b7f07f4f66ae70f9ad8577fdc4~mv2.jpg"
       }
     ]
@@ -4342,16 +4342,16 @@
   {
     "baseName": "Prince Foods Achappam 150g BOX",
     "description": "Prince Foods Achappam is a traditional South Indian snack that brings together crispy, light, and golden treats perfect for any occasion. Also known as \"Muthus\" or \"Rose Cookies,\" Achappam is made from a simple yet flavorful batter of rice flour.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Value Packs"
+      "Snacks",
+      "Snack Value Packs"
     ],
     "variants": [
       {
         "name": "Prince Foods Achappam 150g BOX",
         "packSize": "150g",
-        "category": "Savouries Value Packs",
+        "category": "Snack Value Packs",
         "image": "https://static.wixstatic.com/media/96bfc4_5795ab1e486d4ebcbe9af8cb815a04cc~mv2.jpg"
       }
     ]
@@ -4359,22 +4359,22 @@
   {
     "baseName": "Prince Foods Banana Chips",
     "description": "Prince Foods Banana Chips are a classic, crispy snack made from fresh, handpicked raw bananas, sliced thinly and fried to golden perfection.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Value Packs"
+      "Snacks",
+      "Snack Value Packs"
     ],
     "variants": [
       {
         "name": "Prince Foods Banana Chips 1kg",
         "packSize": "1kg",
-        "category": "Savouries Value Packs",
+        "category": "Snack Value Packs",
         "image": "https://static.wixstatic.com/media/96bfc4_998b9b8cbaea43628369cf0a2007ebef~mv2.jpeg"
       },
       {
         "name": "Prince Foods Banana Chips 250g",
         "packSize": "250g",
-        "category": "Savouries Value Packs",
+        "category": "Snack Value Packs",
         "image": "https://static.wixstatic.com/media/96bfc4_7c3a1fd63509492496ec5c2c338dff93~mv2.jpg"
       }
     ]
@@ -4382,16 +4382,16 @@
   {
     "baseName": "Prince Foods Plantain Chips",
     "description": "Prince Foods Plantain Chips are a crispy, crunchy, and delicious snack made from fresh, handpicked plantains, carefully sliced and fried to perfection.",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Value Packs"
+      "Snacks",
+      "Snack Value Packs"
     ],
     "variants": [
       {
         "name": "Prince Foods Plantain Chips 250g",
         "packSize": "250g",
-        "category": "Savouries Value Packs",
+        "category": "Snack Value Packs",
         "image": "https://static.wixstatic.com/media/96bfc4_180784f5c2484e1f8bdfde8bc126ae2a~mv2.jpg"
       }
     ]
@@ -4399,340 +4399,17 @@
   {
     "baseName": "Prince Foods Sweet Banana Chips Sarkarra Varatti",
     "description": "Prince Foods Sweet Banana Chips are a delightful treat that brings the perfect balance of sweetness and crunch in every bite. Made from carefully selected ripe bananas",
-    "parentCollection": "Bakery",
+    "parentCollection": "Snacks",
     "collections": [
-      "Bakery",
-      "Savouries Value Packs"
+      "Snacks",
+      "Snack Value Packs"
     ],
     "variants": [
       {
         "name": "Prince Foods Sweet Banana Chips Sarkarra Varatti 150g",
         "packSize": "150g",
-        "category": "Savouries Value Packs",
+        "category": "Snack Value Packs",
         "image": "https://static.wixstatic.com/media/96bfc4_17d473321dd54867a21898061f33668a~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Avaloose Podi Avees (Jar)",
-    "description": "A traditional Kerala delicacy made from roasted rice flour and coconut, perfect for a quick, healthy snack with banana or jaggery.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Avaloose Podi Avees (Jar) 500g",
-        "packSize": "500g",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_fd729248ea774b90b426e2b61761feef~mv2.jpeg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Cheeda Sugarfree",
-    "description": "A crunchy, diabetic-friendly snack made without any added sugar\u2014ideal for those seeking a tasty, guilt-free treat.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Cheeda Sugarfree 250g",
-        "packSize": "250g",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_34693194708245d18c7298442e7c09c3~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Cheeda Sweet",
-    "description": "A classic South Indian crispy snack coated in a light sugar glaze\u2014crunchy, sweet, and satisfying.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Cheeda Sweet 250g",
-        "packSize": "250g",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_ae77b96c27ac426b904d78d4fbb5fd67~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Idiyappam Podi",
-    "description": "Finely ground rice flour perfect for making soft and fluffy idiyappam (string hoppers), a Kerala breakfast staple.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Idiyappam Podi 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_90cce0fb24024fbb805bbc9ca4effe6a~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Kaliyadakka",
-    "description": "A crunchy and savory Kerala snack made from roasted rice and spices. Perfect for teatime or as a light bite with authentic homemade flavor.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Kaliyadakka 250g",
-        "packSize": "250g",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_bbeb795ee00a4879a15d1c3e1e2f08f9~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Puncha Iddiyapam Podi",
-    "description": "Specially processed rice flour designed for easy preparation of soft and thin idiyappam, with a delicate texture and taste.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Puncha Iddiyapam Podi 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_0b3edd0faf6b476c9ba7f1ff0ee96c30~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Roasted Rava",
-    "description": "Premium semolina roasted to perfection\u2014ideal for making upma, kesari, and a variety of South Indian dishes.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Roasted Rava 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_0d984766f8cc4e0883cb34b87a94e2c4~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Steamed Puncha Puttu Podi",
-    "description": "Steam-ready flour mix crafted for making traditional Kerala puncha puttu with a soft, grainy texture.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Steamed Puncha Puttu Podi 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_93d208af48a644e7b9350a384e5e3f1c~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Steamed Puttu Podi White",
-    "description": "A classic white puttu podi made from carefully milled rice, steamed to fluffy perfection for a wholesome breakfast.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Steamed Puttu Podi White 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_93d208af48a644e7b9350a384e5e3f1c~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Vatayappam Podi",
-    "description": "A special blend of rice flour ideal for making soft, spongy vattayappam\u2014a steamed rice cake enjoyed across Kerala.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Vatayappam Podi 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_f0a18943d3964d44b767b6b763a4f350~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Avees Wheat Puttu Podi",
-    "description": "Healthy wheat-based alternative to traditional puttu podi, combining taste with the benefits of whole grains.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Avees Products"
-    ],
-    "variants": [
-      {
-        "name": "Avees Wheat Puttu Podi 1kg",
-        "packSize": "1kg",
-        "category": "Avees Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_10f569f39a1548d9992be57350e8570a~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Chemba Puttu Podi",
-    "description": "Ojes Chemba Puttu Podi 500g is a roasted rice flour made from Kuttanadan red rice, ideal for soft and flavorful South Indian steamed puttu.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Chemba Puttu Podi 500g",
-        "packSize": "500g",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_b3393440dcfb4ed58c07f6cf951a8442~mv2.jpeg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Easy Mix Palappam Podi",
-    "description": "Ojes Easy Mix Palappam Podi 500g is a ready-to-use blend for soft, lacy Kerala appams\u2014just add water, rest, and cook.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Easy Mix Palappam Podi 500g",
-        "packSize": "500g",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_6f93eb1cde03450494ae2566f1f7dfa4~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Premium Iddiyappam Podi",
-    "description": "Ojes Premium Iddiyappam Podi 1kg is a fine rice flour ideal for soft, fluffy string hoppers\u2014perfect for traditional South Indian meals.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Premium Iddiyappam Podi 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_8b1a8590f5604911b2585733f0d1f933~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Roasted Rava Semolina",
-    "description": "Ojes Roasted Rava Semolina 1kg is pre-roasted wheat flour, perfect for making upma, halwa, and other traditional dishes.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Roasted Rava Semolina 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_476489452c0a41ea93f4a00884a8143f~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Roasted Rice Powder",
-    "description": "Ojes Roasted Rice Powder 1kg is a premium, finely ground rice flour, expertly roasted to enhance its natural aroma and flavor. Ideal for preparing traditional South Indian dishes like puttu, idiyappam, and kozhukatta",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Roasted Rice Powder 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_9f876e4cdf5e46369035de65224bb00e~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Steamed Wheat Puttu Podi",
-    "description": "Ojes Steamed Wheat Puttu Podi 1kg is a premium wheat flour blend, meticulously steamed and roasted to achieve a light, fluffy texture. Ideal for crafting traditional South Indian wheat puttu",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Steamed Wheat Puttu Podi 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_3e912e23513f4965b76d0da5d26e703f~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Steamed white puttupodi",
-    "description": "Ojes Steamed White Puttu Podi 1kg is a premium rice flour blend, meticulously steamed and roasted to achieve a light, fluffy texture.",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Steamed white puttupodi 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_88efa1947df14656887655be7d404b88~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Ojes Whole Wheat Chakki Atta Powder",
-    "description": "Ojes Whole Wheat Chakki Atta Powder 1kg is a premium whole wheat flour, traditionally stone-ground to retain natural nutrients and fiber. Ideal for making soft rotis, chapatis, and parathas",
-    "parentCollection": "Groceries",
-    "collections": [
-      "Groceries",
-      "Ojes Products"
-    ],
-    "variants": [
-      {
-        "name": "Ojes Whole Wheat Chakki Atta Powder 1kg",
-        "packSize": "1kg",
-        "category": "Ojes Products",
-        "image": "https://static.wixstatic.com/media/96bfc4_64c7c58ed2ed48c0b14a31252430052c~mv2.jpg"
       }
     ]
   },
@@ -4957,624 +4634,6 @@
         "packSize": "750ml",
         "category": "Beverages",
         "image": "https://static.wixstatic.com/media/96bfc4_841c8f8602434ca4b4563c1ba663bf46~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Black and White",
-    "description": "Cherish Black & White Biscuits A delightful duo of crisp chocolate and vanilla biscuits, each filled with a smooth, creamy centre",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Black and White 180g",
-        "packSize": "180g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_46254e6143144a9fb032f8bb0cce644a~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Black and White 330g",
-        "packSize": "330g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_ab7d33cde1b94721a57ce36d11a5bb55~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Black and White 80g",
-        "packSize": "80g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_8d2a4d92bb40493aa4856eb9aaf4e19b~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Choco Peeps",
-    "description": "Cherish Biscuits Choco Peeps Soft chocolate-coated treats with a creamy centre \u2013 perfect for anytime indulgence.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Choco Peeps 240g",
-        "packSize": "240g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_1c659dc263f94aa7a14f9d625cefba4d~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Choco Peeps 50g",
-        "packSize": "50g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_671b4b2f954947e7ad3962c84967fe65~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Chocolate cream",
-    "description": "The Cherish Chocolate Cream biscuits are a classic cream\u2011sandwich treat from Sri Lanka\u2019s Cherish brand. They feature two delicate, cocoa\u2011flavoured biscuits filled with a smooth, chocolate cream\u2014perfect for pairing with tea or coffee",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Chocolate cream 100g",
-        "packSize": "100g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_b05483b62e8247a29fec5513170611c2~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Chocolate cream 200g",
-        "packSize": "200g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_b36632cfc73b466884d9e94dd189c203~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Chocolate cream 365g",
-        "packSize": "365g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_dd90ce919d774ec7ad7d9038f98f103e~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Chocolate fingers",
-    "description": "Cherish Chocolate Fingers are a premium Sri Lankan snack made by Cherish Biscuits,a light, crispy wafer-style biscuit shaped as a \u201cfinger.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Chocolate fingers 40g",
-        "packSize": "40g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_55065d08079c483599a320c8472cb684~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Chocolate Fingers",
-    "description": "Cherish Chocolate Fingers are a premium Sri Lankan snack made by Cherish Biscuits,a light, crispy wafer-style biscuit shaped as a \u201cfinger.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Chocolate Fingers 80g",
-        "packSize": "80g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_6061bcc438f84b8ea6fe27b2a288bab5~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Custard Cream",
-    "description": "Cherish Biscuits Custard Cream-Two crisp, buttery biscuits encase a smooth, sweet custard\u2011flavored cream\u2014light and slightly crumbly in texture",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Custard Cream 200g",
-        "packSize": "200g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_75cacce41a5948f893fb9bdaf9647d9b~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Duplex cream",
-    "description": "Cherish Biscuits Duplex Cream is a premium Sri Lankan sweet biscuit featuring a sandwich of two distinct biscuits\u2014one cocoa-flavored (chocolate) and one buttery vanilla\u2014filled with a smooth custard cream.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Duplex cream 330g",
-        "packSize": "330g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_97a1e8110b3e410c94c680437ffa06ad~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Duplex cream 80g",
-        "packSize": "80g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_81a5d76f06c343778813bc989ed5e1db~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Ginger Snaps",
-    "description": "Cherish Ginger biscuits come in a 475 g pack and belong to Cherish\u2019s \"Sweet\" range. These are classic ginger-flavored biscuits with a bold, warming spice profile\u2014perfect for pairing with tea or coffee",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Ginger Snaps 475g",
-        "packSize": "475g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_d1ee579108d94c7bad021066a78d5d5c~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Lemon Cream",
-    "description": "Cherish Lemon Cream is a crisp, sandwich-style cream biscuit weighing 330 g per pack. Two lightly sweet golden biscuits are layered with a smooth, tangy lemon-flavored cream, offering a refreshing citrus bite with every crunch",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Lemon Cream 330g",
-        "packSize": "330g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_1b4fc6409b4a45fc80f94ca1d79f850c~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Lemon puff",
-    "description": "Cherish Lemon Puff is a delightful sandwich-style biscuit featuring two light, airy puff-textured biscuits filled with a zesty lemon cream center.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Lemon puff 200g",
-        "packSize": "200g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_00fc1ee39a1e498384d139abb4207c76~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Orange Cream",
-    "description": "Cherish Orange Cream Biscuit is a 330 g pack of sandwich-style cream biscuits. Each pair features two crisp golden biscuits layered with a zesty, velvety orange-flavoured cream\u2014a delightful twist for tea or coffee moments",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Orange Cream 330g",
-        "packSize": "330g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_ea8cc36e05294de5bc92b16743c0ae5c~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Shorties",
-    "description": "Cherish Biscuits Shorties -Rich, buttery flavor: Made with a generous milk content, Shorties offer a creamy, melt-in-the-mouth experience",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Shorties 280g",
-        "packSize": "280g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_4f6f3fd1ddd14cc894f5b1a5c46db373~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Shorties 350g",
-        "packSize": "350g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_ed16c0117ed5487d8fc7e07653bdc7e5~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Vanilla peeps",
-    "description": "Cherish Vanilla Peeps are small, round sweet biscuits infused with a distinct vanilla flavor.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Vanilla peeps 200g",
-        "packSize": "200g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_63310d368df140488624bc00ba92e6f3~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Vanilla Peeps",
-    "description": "Cherish Vanilla Peeps are small, round sweet biscuits infused with a distinct vanilla flavor.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Vanilla Peeps 50g",
-        "packSize": "50g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_f5706dc28ba74dc8ba0b798e17e71543~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Cream Cracker",
-    "description": "Cherish Supreme Cream Crackers - A classic savoury treat from Sri Lanka\u2019s Cherish Biscuits, these Supreme Cream Crackers offer a light, crisp texture perfect for everyday snacking.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Cream Cracker 125g",
-        "packSize": "125g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_06bb6fee661b4953af17389d5e01656e~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Cream cracker",
-    "description": "Cherish Supreme Cream Crackers - A classic savoury treat from Sri Lanka\u2019s Cherish Biscuits, these Supreme Cream Crackers offer a light, crisp texture perfect for everyday snacking.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Cream cracker 230g",
-        "packSize": "230g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_143604623ce84cbdbba5fc65210c01f0~mv2.jpg"
-      },
-      {
-        "name": "Cherish Biscuits Cream cracker 500g",
-        "packSize": "500g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_e217a05917324a8bb3d0cb310391f580~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Like Marie",
-    "description": "Cherish Biscuits Like Marie -\"Like Marie\" is Cherish\u2019s take on the classic milk\u2011Marie biscuit. These light, vanilla-infused round biscuits are crafted for tea-dunking, snacking, or sharing",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Like Marie 240g",
-        "packSize": "240g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_3316768af21e4e5e9d276a456c52f081~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Like Marie 50g",
-        "packSize": "50g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_0ac63d71c4094a9ba98d4ae46f9deb03~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Marie",
-    "description": "Cherish\u2019s  Marie is their take on the classic Marie biscuit. These thin, crisp, vanilla\u2011scented biscuits are lightly sweetened and milk\u2011enhanced, making them perfect for dunking, snacking, or sharing",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Marie 320g",
-        "packSize": "320g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_e40fdc59703d43d5ad9ee5903672f60c~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Biscuits Nice",
-    "description": "Cherish Nice are coconut-flavored sweet biscuits, lightly sugared, crafted to delight the taste buds.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Biscuits"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Biscuits Nice 240g",
-        "packSize": "240g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_3e66e39334344ba49f9fa5106ddf598b~mv2.png"
-      },
-      {
-        "name": "Cherish Biscuits Nice 450g",
-        "packSize": "450g",
-        "category": "Cherish Biscuits",
-        "image": "https://static.wixstatic.com/media/96bfc4_74c8e130cf03498fa1aa09768f77c000~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Choco wafers",
-    "description": "Cherish Biscuits Choco Wafers light and crispy wafer layers generously coated in rich chocolate\u2014each bite delivers an irresistible crisp and creamy indulgence.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Choco wafers 225g",
-        "packSize": "225g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_4a1d396d83bf4b508c1dfedb92b13c10~mv2.png"
-      },
-      {
-        "name": "Cherish Choco wafers 30g",
-        "packSize": "30g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_be5c3d27ac7f42fa96e6d22bbd94b1cb~mv2.png"
-      },
-      {
-        "name": "Cherish Choco wafers 85g",
-        "packSize": "85g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_7fad9fb00846440291f2d5ccef920ea6~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Chocolate wafers",
-    "description": "Cherish Chocolate Wafers -A beloved Sri Lankan snack from Cherish Biscuits,  features layers of light, crisp wafers generously coated with smooth, creamy chocolate",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Chocolate wafers 310g",
-        "packSize": "310g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_c9ebf64cf8d34ef1bcef83681d5b8bc5~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Classic Vanilla wafers",
-    "description": "Cherish Classic Vanilla Cream Wafers-A light and crispy Sri Lankan snack from Cherish Biscuits, the Classic Vanilla Cream Wafers feature thin, airy wafer layers generously filled with smooth vanilla cream.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Classic Vanilla wafers 85g",
-        "packSize": "85g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_c6551969f9014956b9fe8691a5a393fa~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Classic wafers",
-    "description": "Cherish Classic  Wafers \u2013 Crunchy, multi-layered wafers coated with a rich, smooth chocolate cream\u2014perfect for a little indulgence anytime",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Classic wafers 30g",
-        "packSize": "30g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_dcd235b320c4440a99f89c86cd3dab36~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Cube wafers",
-    "description": "Cherish Cube Wafers are bite-sized vanilla wafer snacks, shaped into small cubes for easy one\u2011bite enjoyment",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Cube wafers 85g",
-        "packSize": "85g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_20be96cd86684488a67829cf09f16631~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Lemon wafers",
-    "description": "Cherish Lemon Cream Wafers come in a 225 g pack, featuring thin, crispy wafer layers with a smooth lemon-flavored cream sandwiched in between.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Lemon wafers 225g",
-        "packSize": "225g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_0f8bb30c67854d0eba2e03d52f1f59af~mv2.png"
-      },
-      {
-        "name": "Cherish Lemon wafers 30g",
-        "packSize": "30g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_0f8bb30c67854d0eba2e03d52f1f59af~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Milk wafers",
-    "description": "Cherish Milk Wafers are crispy, layered wafer biscuits filled with smooth, creamy milk-flavored cream.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Milk wafers 225g",
-        "packSize": "225g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_7600eea9955a4ea18971aef3acd4fb07~mv2.png"
-      },
-      {
-        "name": "Cherish Milk wafers 310g",
-        "packSize": "310g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_5716dfee810148fea98cbe06be6f5e6c~mv2.png"
-      },
-      {
-        "name": "Cherish Milk wafers 85g",
-        "packSize": "85g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_957f3bcc9ada4efc84364cce7d6c9ece~mv2.png"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Pink wafers",
-    "description": "Cherish Pink Cream Wafers are crisp, multi-layered wafers filled with smooth strawberry-flavored cream",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Pink wafers 225g",
-        "packSize": "225g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_5d638cea979943c58daf880e817f9374~mv2.jpg"
-      },
-      {
-        "name": "Cherish Pink wafers 375g",
-        "packSize": "375g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_64588f1c31dd4fd2ba32248803ef9206~mv2.png"
-      },
-      {
-        "name": "Cherish Pink wafers 85g",
-        "packSize": "85g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_8e2a5013155d4bab82286eeab983d41b~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Vanilla wafers",
-    "description": "Cherish\u2019s Vanilla Cream Wafers are crisp, multi-layered wafer biscuits generously filled with smooth vanilla cream.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Vanilla wafers 225g",
-        "packSize": "225g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_517053632773431989e63b0210aa75fa~mv2.jpg"
-      },
-      {
-        "name": "Cherish Vanilla wafers 375g",
-        "packSize": "375g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_db2990b300ae41a9b6c841a31beb3396~mv2.jpg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Break Bundle Pack 10g x 24 (Choco Wafer finger )",
-    "description": "Cherish Break (Choco Wafer Finger) : \u201cCrispy chocolate-coated wafer fingers for a quick, delicious bite.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Break Bundle Pack 10g x 24 (Choco Wafer finger ) 10g",
-        "packSize": "10g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_017591cbdd714adcbc6300a70b766648~mv2.jpeg"
-      }
-    ]
-  },
-  {
-    "baseName": "Cherish Break Bundle Pack 6g x24 (Choco Wafer finger )",
-    "description": "Cherish Break (Choco Wafer Finger) :\u201cCrispy chocolate-coated wafer fingers for a quick, delicious bite.",
-    "parentCollection": "Bakeries",
-    "collections": [
-      "Bakeries",
-      "Cherish Wafers"
-    ],
-    "variants": [
-      {
-        "name": "Cherish Break Bundle Pack 6g x24 (Choco Wafer finger )",
-        "packSize": "6g",
-        "category": "Cherish Wafers",
-        "image": "https://static.wixstatic.com/media/96bfc4_2ac5159e9fcd47edbf0ae2f4dafb706a~mv2.jpeg"
       }
     ]
   },

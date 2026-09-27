@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 import { usePathname } from 'next/navigation';
 import { motion, useAnimationControls, useReducedMotion } from 'framer-motion';
 import styles from './Navbar.module.scss';
-import { NAV_LINKS } from '@/config/menu.config';
+import { NAV_CTA, NAV_LINKS } from '@/config/menu.config';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,8 @@ export default function Navbar() {
 
   const toggleMenu = () => setMenuOpen((p) => !p);
   const closeMenu = () => setMenuOpen(false);
-  const isLinkActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
+  const isLinkActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(href + '/');
 
   // Glass → solid on scroll
   useEffect(() => {
@@ -92,6 +93,12 @@ export default function Navbar() {
           })}
         </div>
 
+        {/* CTA (top right) */}
+        <Link href={NAV_CTA.href} className={styles.cta}>
+          {NAV_CTA.label}
+          <Icon icon="mdi:arrow-right" aria-hidden="true" />
+        </Link>
+
         {/* Hamburger */}
         <button
           className={styles.hamburger}
@@ -120,6 +127,9 @@ export default function Navbar() {
             </Link>
           );
         })}
+        <Link href={NAV_CTA.href} onClick={closeMenu} className={styles.mobileCta}>
+          {NAV_CTA.label}
+        </Link>
       </div>
     </nav>
   );

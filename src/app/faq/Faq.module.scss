@@ -1,6 +1,11 @@
+.page {
+  /* Clear the fixed navbar so the heading is always fully visible */
+  padding: calc(var(--navbar-height, 70px) + 3rem) clamp(16px, 4vw, 32px) 4rem;
+}
+
 .wrapper {
     max-width: 800px;
-    margin: 4rem auto;
+    margin: 0 auto;
     padding: 2rem;
     background: var(--color-bg-light);
     border-radius: 12px;

@@ -3,67 +3,37 @@
 import { useState } from 'react';
 import styles from './Faq.module.scss';
 
+// Draft questions — final wording to be confirmed by Regio Foods
 const faqs = [
   {
-    question: 'What services do you offer?',
-    answer: 'We offer full-stack web development, e-commerce solutions, SEO, and branding.',
-  },
-  {
-    question: 'How long does it take to build a site?',
-    answer: 'It depends on complexity, but typically between 2-6 weeks.',
-  },
-  {
-    question: 'Do you provide support after launch?',
-    answer: 'Absolutely. We offer maintenance plans and technical support.',
-  },
-  {
-    question: 'Can I request custom features?',
-    answer: 'Yes, we specialize in tailored solutions that meet your unique needs.',
-  },
-  {
-    question: 'What does the Web Dev Wizard CLI actually generate?',
+    question: 'What products does Regio Foods supply?',
     answer:
-      'It scaffolds a full Next.js 15 project with TypeScript, SCSS, a modern responsive layout, a navbar, footer, optional e-commerce components, and a sitemap. It also installs all required dependencies like react-icons, sass, and lottie-react.',
+      'We supply a wide range of South Indian and Sri Lankan foods, including frozen flatbreads and ready-to-heat meals, groceries, rice, spices, snacks, bakery items and beverages.',
   },
   {
-    question: 'How do I add more navigation links during setup?',
+    question: 'Do you supply wholesale and trade customers?',
     answer:
-      'When prompted during the wizard, you can enter additional page names separated by commas. These will be auto-created with boilerplate content and added to the navigation config.',
+      'Yes. We work with retailers, wholesalers, distributors and food-service businesses. Contact our team to discuss your requirements and volumes.',
   },
   {
-    question: 'Why is `Cart` and `Login` not in the menu config?',
+    question: 'Can you produce private-label products?',
     answer:
-      'They are intentionally excluded from the navigation menu because they are rendered as icons when `isEcommerce` is enabled. Their functionality lives in the Navbar component logic.',
+      'Yes. We can develop and pack products under your own brand, with specifications and artwork tailored to your market.',
   },
   {
-    question: 'Can I run this CLI from anywhere?',
+    question: 'Which markets do you export to?',
     answer:
-      'Yes. As long as Node.js and Yarn are installed, you can run it from any terminal using `node web-dev-wizard.mjs`. Just make sure the `template/` folder exists beside it.',
+      'We supply customers across the UK, Europe, the Middle East and beyond. Get in touch to confirm availability and logistics for your region.',
   },
   {
-    question: 'What happens if I choose E-commerce mode?',
+    question: 'What quality and food-safety standards do you follow?',
     answer:
-      'The CLI will copy e-commerce specific components and pages (like CartIcon, LoginButton, and checkout templates) into your project. These are lazily loaded and don’t interfere with static sites.',
+      'Our products are manufactured under controlled food-safety systems with batch traceability and multi-stage quality checks.',
   },
   {
-    question: 'I got a module not found error after setup. What do I do?',
+    question: 'How do I request a price list or samples?',
     answer:
-      'This usually happens if a dependency like `sass` or `lottie-react` wasn’t installed properly. Just run `yarn` or `yarn add` manually in your project folder to fix it.',
-  },
-  {
-    question: 'Can I re-run the wizard inside an existing project?',
-    answer:
-      "It's recommended to use the wizard in a clean directory. It deletes and overwrites certain folders, so running it in an existing project might cause data loss.",
-  },
-  {
-    question: 'Where can I customize the generated layout?',
-    answer:
-      'You can modify `src/app/layout.tsx` for the layout structure, or tweak SCSS styles in `src/styles/Global.scss` and component-specific modules.',
-  },
-  {
-    question: 'How are the navigation links managed?',
-    answer:
-      'They are auto-generated into `src/config/menu.config.ts` based on your wizard choices. This config is consumed by the Navbar to render links.',
+      'Use the contact form or the “Get a Quote” button at the top of the page, and our team will respond with pricing and sample options.',
   },
 ];
 
@@ -75,21 +45,23 @@ export default function FaqClient() {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <h1>Frequently Asked Questions</h1>
-      <div className={styles.accordion}>
-        {faqs.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <button className={styles.question} onClick={() => toggle(index)}>
-              {item.question}
-              <span className={styles.icon}>{openIndex === index ? '−' : '+'}</span>
-            </button>
-            <div className={`${styles.answer} ${openIndex === index ? styles.open : ''}`}>
-              <p>{item.answer}</p>
+    <section className={styles.page}>
+      <div className={styles.wrapper}>
+        <h1>Frequently Asked Questions</h1>
+        <div className={styles.accordion}>
+          {faqs.map((item, index) => (
+            <div key={index} className={styles.item}>
+              <button className={styles.question} onClick={() => toggle(index)}>
+                {item.question}
+                <span className={styles.icon}>{openIndex === index ? '−' : '+'}</span>
+              </button>
+              <div className={`${styles.answer} ${openIndex === index ? styles.open : ''}`}>
+                <p>{item.answer}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
