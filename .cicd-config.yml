@@ -1,13 +1,14 @@
-project_type: static
+project_type: node
 slug: regiofoods
 port: 3000
 
 domains:
   prod: regiofoods.in
+  admin: admin.regiofoods.in
 
 deploy_targets:
   main-hetz: hetzner
   dev: vercel
   preview: vercel
 
-db: none 
+pgadmin_subdomain: db

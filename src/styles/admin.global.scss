@@ -1,0 +1,37 @@
+/* Admin panel tokens — Regio brand (red on light), structure from the Essentia admin. */
+.admin-root {
+  --admin-bg: #f4f5f7;
+  --admin-card: #ffffff;
+  --admin-soft: #f9fafb;
+  --admin-ink: #1c1c1c;
+  --admin-muted: #667085;
+  --admin-line: #e4e7ec;
+  --admin-line-strong: #d0d5dd;
+  --admin-accent: #e23b2e;
+  --admin-accent-hover: #c92f23;
+  --admin-accent-soft: rgba(226, 59, 46, 0.08);
+  --admin-accent-ink: #ffffff;
+  --admin-ok: #12805c;
+  --admin-ok-bg: #ecfdf3;
+  --admin-warn: #b54708;
+  --admin-warn-bg: #fffaeb;
+  --admin-err: #b42318;
+  --admin-err-bg: #fef3f2;
+  --admin-radius: 14px;
+  --admin-shadow-1: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --admin-shadow-2: 0 12px 32px rgba(16, 24, 40, 0.12);
+
+  min-height: 100vh;
+  background: var(--admin-bg);
+  color: var(--admin-ink);
+  font-size: 15px;
+}
+
+/* The public site's white header fade is not wanted in the admin. */
+body:has(.admin-root)::before {
+  display: none;
+}
+
+.admin-root a {
+  color: inherit;
+}

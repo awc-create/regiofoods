@@ -1,12 +1,7 @@
-// src/app/admin/page.tsx
-import type { Metadata } from 'next';
-import AdminClient from './AdminClient';
+import Dashboard from '@/components/admin/dashboard/Dashboard';
 
-export const metadata: Metadata = {
-  title: 'Admin Dashboard | Dr. Odera Ezenna',
-  description: 'Manage blog posts, hero image, and subscribers.',
-};
+export const metadata = { title: 'Dashboard' };
 
-export default function AdminPage() {
-  return <AdminClient />;
+export default function AdminHome() {
+  return <Dashboard />;
 }

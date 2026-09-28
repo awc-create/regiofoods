@@ -414,3 +414,13 @@
     align-items: flex-start;
   }
 }
+
+.noImage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  background: var(--surface-muted);
+}

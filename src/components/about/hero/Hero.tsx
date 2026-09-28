@@ -1,54 +1,56 @@
 // src/components/about/hero/Hero.tsx
 import Link from 'next/link';
+import Lines from '@/components/common/Lines';
+import type { aboutHero } from '@/content/sections/about';
 import styles from './Hero.module.scss';
 
-export default function AboutHero() {
+type Props = { content: typeof aboutHero.defaults };
+
+export default function AboutHero({ content: c }: Props) {
   return (
     <section className={styles.hero} aria-labelledby="about-hero-heading">
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>About Regio Foods</p>
+        {c.eyebrow && <p className={styles.eyebrow}>{c.eyebrow}</p>}
 
         <h1 id="about-hero-heading" className={styles.title}>
-          A factory built on discipline,
-          <br />
-          not shortcuts.
+          <Lines text={c.heading} />
         </h1>
 
-        <p className={styles.lead}>
-          Regio Foods was shaped around global food laws and safety regulations – from UK and EU
-          standards through to GCC and North American import rules. Instead of treating them as a
-          hurdle, we used them to fortify how we hire, train and run the plant every day.
-        </p>
+        {c.intro && <p className={styles.lead}>{c.intro}</p>}
 
-        <div className={styles.chips}>
-          <span className={styles.chip}>Export-focused manufacturing</span>
-          <span className={styles.chip}>Safety &amp; standards first</span>
-          <span className={styles.chip}>Transparent, traceable batches</span>
-        </div>
+        {c.chips.length > 0 && (
+          <div className={styles.chips}>
+            {c.chips.map((chip) => (
+              <span key={chip} className={styles.chip}>
+                {chip}
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className={styles.ctaRow}>
-          <Link href="#about-story" className={styles.primaryCta}>
-            Our story
-          </Link>
-          <Link href="#about-pillars" className={styles.secondaryCta}>
-            How we&apos;re different
-          </Link>
+          {c.primaryCta.label && (
+            <Link href={c.primaryCta.href || '#'} className={styles.primaryCta}>
+              {c.primaryCta.label}
+            </Link>
+          )}
+          {c.secondaryCta.label && (
+            <Link href={c.secondaryCta.href || '#'} className={styles.secondaryCta}>
+              {c.secondaryCta.label}
+            </Link>
+          )}
         </div>
 
-        <div className={styles.metaRow}>
-          <div>
-            <span className={styles.metaLabel}>Founded for</span>
-            <p className={styles.metaValue}>International buyers</p>
+        {c.meta.length > 0 && (
+          <div className={styles.metaRow}>
+            {c.meta.map((m, i) => (
+              <div key={`${m.label}-${i}`}>
+                <span className={styles.metaLabel}>{m.label}</span>
+                <p className={styles.metaValue}>{m.value}</p>
+              </div>
+            ))}
           </div>
-          <div>
-            <span className={styles.metaLabel}>Built around</span>
-            <p className={styles.metaValue}>Global safety laws</p>
-          </div>
-          <div>
-            <span className={styles.metaLabel}>Core promise</span>
-            <p className={styles.metaValue}>No shortcuts on safety</p>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

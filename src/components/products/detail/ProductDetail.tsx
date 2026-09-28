@@ -5,27 +5,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProductDetail.module.scss';
 
-export type ProductVariant = {
-  name: string;
-  packSize: string;
-  category: string;
-  image: string;
-};
+import type { CatalogueProduct, CatalogueVariant } from '@/lib/catalogue';
+import type { productsDetail } from '@/content/sections/pages';
 
-export type Product = {
-  baseName: string;
-  description: string;
-  parentCollection: string;
-  collections: string[];
-  variants: ProductVariant[];
-};
+export type Product = CatalogueProduct;
+type ProductVariant = CatalogueVariant;
 
 type Props = {
   product: Product;
+  labels: typeof productsDetail.defaults;
 };
 
-export default function ProductDetail({ product }: Props) {
-  const mainImage = product.variants[0]?.image || '/placeholder.jpg';
+export default function ProductDetail({ product, labels }: Props) {
+  const mainImage = product.variants.find((v) => v.image)?.image || '';
 
   // Pack sizes as clean string[]
   const packSizes: string[] = product.variants
@@ -54,7 +46,7 @@ export default function ProductDetail({ product }: Props) {
         <div className={styles.layout}>
           {/* Text column */}
           <div className={styles.copy}>
-            <p className={styles.eyebrow}>Frozen product</p>
+            {labels.eyebrow && <p className={styles.eyebrow}>{labels.eyebrow}</p>}
 
             <h1 className={styles.title}>{product.baseName}</h1>
 
@@ -72,10 +64,7 @@ export default function ProductDetail({ product }: Props) {
               </div>
             )}
 
-            <p className={styles.lead}>
-              {product.description ||
-                'Frozen product in the Regio Foods range. Specifications, artwork and pack formats can be tuned for your market.'}
-            </p>
+            <p className={styles.lead}>{product.description || labels.fallbackDescription}</p>
 
             <dl className={styles.facts}>
               {packSizes.length > 0 && (
@@ -94,30 +83,38 @@ export default function ProductDetail({ product }: Props) {
             </dl>
 
             <div className={styles.ctaRow}>
-              <button type="button" className={styles.primaryCta}>
-                Request spec sheet
-              </button>
-              <Link href="/contact" className={styles.secondaryCta}>
-                Talk about this product →
-              </Link>
+              {labels.primaryCta.label && (
+                <Link
+                  href={`${labels.primaryCta.href || '/contact'}?product=${encodeURIComponent(product.baseName)}`}
+                  className={styles.primaryCta}
+                >
+                  {labels.primaryCta.label}
+                </Link>
+              )}
+              {labels.secondaryCta.label && (
+                <Link href={labels.secondaryCta.href || '/contact'} className={styles.secondaryCta}>
+                  {labels.secondaryCta.label}
+                </Link>
+              )}
             </div>
           </div>
 
           {/* Image column */}
           <div className={styles.media}>
             <div className={styles.imageWrap}>
-              <Image
-                src={mainImage}
-                alt={product.baseName}
-                fill
-                sizes="(min-width: 960px) 420px, 100vw"
-                className={styles.heroImage}
-              />
+              {mainImage ? (
+                <Image
+                  src={mainImage}
+                  alt={product.baseName}
+                  fill
+                  sizes="(min-width: 960px) 420px, 100vw"
+                  className={styles.heroImage}
+                  priority
+                />
+              ) : null}
             </div>
 
-            <p className={styles.imageNote}>
-              Pack shot for illustration. Final artwork and declarations can be adapted per market.
-            </p>
+            {labels.imageNote && <p className={styles.imageNote}>{labels.imageNote}</p>}
           </div>
         </div>
 
@@ -145,10 +142,7 @@ export default function ProductDetail({ product }: Props) {
               ))}
             </div>
 
-            <p className={styles.variantsNote}>
-              Exact pack sizes, case counts and barcodes can be confirmed during development or
-              listing.
-            </p>
+            {labels.variantsNote && <p className={styles.variantsNote}>{labels.variantsNote}</p>}
           </section>
         )}
       </div>

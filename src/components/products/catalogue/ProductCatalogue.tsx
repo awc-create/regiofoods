@@ -4,36 +4,20 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import productsData from '@/data/products.json';
-import { slugify } from '@/utils/slugify';
 import styles from './ProductCatalogue.module.scss';
 
-export type ProductVariant = {
-  name: string;
-  packSize: string;
-  category: string;
-  image: string;
+import type { CatalogueProduct } from '@/lib/catalogue';
+import type { productsCatalogue } from '@/content/sections/pages';
+
+type Props = {
+  heading: typeof productsCatalogue.defaults;
+  products: CatalogueProduct[];
+  /** Parent tabs and their sub-categories, in the order set in the admin. */
+  tabs: { name: string; children: string[] }[];
 };
 
-export type Product = {
-  baseName: string;
-  description: string;
-  parentCollection: string;
-  collections: string[];
-  variants: ProductVariant[];
-};
-
-const PRODUCTS = productsData as Product[];
-
-// Order of the top-level category tabs
-const PARENT_ORDER = ['Frozen', 'Groceries', 'Snacks', 'Bakery', 'Beverages', 'Others'];
-
-const parentRank = (name: string) => {
-  const i = PARENT_ORDER.indexOf(name);
-  return i === -1 ? PARENT_ORDER.length : i;
-};
-
-export default function ProductCatalogue() {
+export default function ProductCatalogue({ heading, products, tabs }: Props) {
+  const PRODUCTS = products;
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [perPage, setPerPage] = useState<number>(16); // default 16
@@ -52,25 +36,11 @@ export default function ProductCatalogue() {
     return () => document.removeEventListener('mousedown', onDown);
   }, []);
 
-  // Parent → child categories map
-  const parentMap = useMemo(() => {
-    const map: Record<string, Set<string>> = {};
-
-    PRODUCTS.forEach((p) => {
-      const parent = p.parentCollection || 'Other';
-      if (!map[parent]) map[parent] = new Set();
-
-      p.variants.forEach((v) => {
-        if (v.category) map[parent].add(v.category);
-      });
-    });
-
-    return Object.fromEntries(
-      Object.entries(map)
-        .sort(([a], [b]) => parentRank(a) - parentRank(b) || a.localeCompare(b))
-        .map(([k, v]) => [k, Array.from(v).sort()])
-    );
-  }, []);
+  // Parent → child categories map (order comes from the admin)
+  const parentMap = useMemo(
+    () => Object.fromEntries(tabs.map((t) => [t.name, t.children])) as Record<string, string[]>,
+    [tabs]
+  );
 
   // Filter + search in one memo so it's cheap & predictable
   const filteredProducts = useMemo(() => {
@@ -92,7 +62,7 @@ export default function ProductCatalogue() {
     }
 
     return result;
-  }, [activeFilter, searchTerm]);
+  }, [PRODUCTS, activeFilter, searchTerm]);
 
   // Alphabetical product list shown under the search box
   const suggestions = useMemo(() => {
@@ -100,7 +70,7 @@ export default function ProductCatalogue() {
     return [...PRODUCTS]
       .filter((p) => !q || p.baseName.toLowerCase().includes(q))
       .sort((a, b) => a.baseName.localeCompare(b.baseName));
-  }, [searchTerm]);
+  }, [PRODUCTS, searchTerm]);
 
   // Pagination maths
   const totalItems = filteredProducts.length;
@@ -137,12 +107,9 @@ export default function ProductCatalogue() {
       {/* HEADER */}
       <div className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>Catalogue</p>
-          <h2 className={styles.heading}>Browse our product range.</h2>
-          <p className={styles.subheading}>
-            These products are currently in production. Specifications and artwork can be tuned for
-            private-label or regional requirements.
-          </p>
+          {heading.eyebrow && <p className={styles.eyebrow}>{heading.eyebrow}</p>}
+          <h2 className={styles.heading}>{heading.heading}</h2>
+          {heading.intro && <p className={styles.subheading}>{heading.intro}</p>}
         </div>
 
         {/* TOP BAR – filters + search + per-page */}
@@ -219,9 +186,9 @@ export default function ProductCatalogue() {
                     <li className={styles.suggestEmpty}>No matching products</li>
                   )}
                   {suggestions.map((p) => (
-                    <li key={p.baseName} role="option" aria-selected={false}>
+                    <li key={p.slug} role="option" aria-selected={false}>
                       <Link
-                        href={`/products/${slugify(p.baseName)}`}
+                        href={`/products/${p.slug}`}
                         className={styles.suggestItem}
                         onClick={() => setSuggestOpen(false)}
                       >
@@ -261,20 +228,24 @@ export default function ProductCatalogue() {
         )}
 
         {pageProducts.map((p) => {
-          const slug = slugify(p.baseName);
+          const slug = p.slug;
 
-          const mainImage = p.variants[0]?.image || '/placeholder.jpg';
+          const mainImage = p.variants.find((v) => v.image)?.image || '';
           const packSizes = p.variants.map((v) => v.packSize).join(' • ');
 
           return (
             <Link key={slug} href={`/products/${slug}`} className={styles.card}>
               <div className={styles.imageWrap}>
-                <Image
-                  src={mainImage}
-                  alt={p.baseName}
-                  fill
-                  sizes="(min-width: 1200px) 25vw, (min-width: 880px) 33vw, 50vw"
-                />
+                {mainImage ? (
+                  <Image
+                    src={mainImage}
+                    alt={p.baseName}
+                    fill
+                    sizes="(min-width: 1200px) 25vw, (min-width: 880px) 33vw, 50vw"
+                  />
+                ) : (
+                  <span className={styles.noImage}>Image coming soon</span>
+                )}
                 {p.parentCollection && <span className={styles.badge}>{p.parentCollection}</span>}
               </div>
 

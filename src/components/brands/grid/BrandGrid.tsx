@@ -2,67 +2,45 @@
 
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
+import Lines from '@/components/common/Lines';
+import type { brandsGrid } from '@/content/sections/brands';
 import styles from './BrandGrid.module.scss';
 
-type Brand = {
+export type GridBrand = {
   name: string;
   note: string;
   scope: string;
   website?: string;
-  logoSrc?: string;
-  scale?: number; // ✅ optical correction per brand
+  logo?: string;
+  scale?: number; // optical correction per brand
 };
 
-const BRANDS: Brand[] = [
-  {
-    name: 'Royal Choice',
-    note: 'A dependable range designed for everyday distribution needs.',
-    scope: 'Frozen staples • export-ready formats',
-    logoSrc: '/assets/brands/royal-choice-logo.png',
-    scale: 1.15,
-  },
-  {
-    name: 'Seelans',
-    note: 'Traditional favourites built around familiar South Asian taste profiles.',
-    scope: 'Select ranges • regional suitability',
-    website: 'https://seelans.com/',
-    logoSrc: '/assets/brands/seelans-logo_1.png',
-    scale: 1,
-  },
-  {
-    name: 'Keralites',
-    note: 'Kerala-inspired products focusing on authentic formats and textures.',
-    scope: 'Flatbreads • snacks • ready-to-cook',
-    // use your real filename:
-    logoSrc: '/assets/brands/Keralites-logo.png',
-    scale: 3,
-  },
-];
+type Props = {
+  heading: typeof brandsGrid.defaults;
+  brands: GridBrand[];
+};
 
-export default function BrandGrid() {
+export default function BrandGrid({ heading: c, brands }: Props) {
   const reduceMotion = useReducedMotion();
 
   return (
     <section className={styles.section} aria-labelledby="brands-grid-heading">
       <div className={styles.inner}>
         <div className={styles.header}>
-          <p className={styles.eyebrow}>Our named ranges</p>
+          {c.eyebrow && <p className={styles.eyebrow}>{c.eyebrow}</p>}
           <h2 id="brands-grid-heading" className={styles.heading}>
-            Brands we work with.
+            <Lines text={c.heading} />
           </h2>
-          <p className={styles.subheading}>
-            These are the ranges we can publicly reference. Availability varies by market and buyer
-            programme.
-          </p>
+          {c.intro && <p className={styles.subheading}>{c.intro}</p>}
         </div>
 
         <div className={styles.grid}>
-          {BRANDS.map((b, i) => {
+          {brands.map((b, i) => {
             const s = b.scale ?? 1;
 
             return (
               <motion.article
-                key={b.name}
+                key={`${b.name}-${i}`}
                 className={styles.card}
                 initial={reduceMotion ? false : { opacity: 0, y: 18 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -74,10 +52,10 @@ export default function BrandGrid() {
               >
                 {/* Visual / Logo zone */}
                 <div className={styles.visual}>
-                  {b.logoSrc ? (
+                  {b.logo ? (
                     <span className={styles.mark} style={{ ['--s' as never]: s }}>
                       <Image
-                        src={b.logoSrc}
+                        src={b.logo}
                         alt={`${b.name} logo`}
                         width={720}
                         height={360}

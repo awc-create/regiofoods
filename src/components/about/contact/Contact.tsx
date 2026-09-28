@@ -1,30 +1,35 @@
+import Lines from '@/components/common/Lines';
+import type { aboutCta } from '@/content/sections/about';
 import styles from './Contact.module.scss';
 
-export default function Contact() {
+type Props = { content: typeof aboutCta.defaults };
+
+export default function Contact({ content: c }: Props) {
   return (
     <section id="about-contact" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <p className={styles.eyebrow}>Next steps</p>
-          <h2 className={styles.heading}>Ready to talk about products or capacity?</h2>
-          <p className={styles.subheading}>
-            Whether you’re a buyer, distributor or partner, we’re happy to walk you through the
-            factory, discuss volumes or explore new product ideas.
-          </p>
+          {c.eyebrow && <p className={styles.eyebrow}>{c.eyebrow}</p>}
+          <h2 className={styles.heading}>
+            <Lines text={c.heading} />
+          </h2>
+          {c.intro && <p className={styles.subheading}>{c.intro}</p>}
         </div>
 
         <div className={styles.actionsBlock}>
           <div className={styles.actions}>
-            <a href="/contact" className={styles.primaryCta}>
-              Get in touch
-            </a>
-            <a href="/factory" className={styles.secondaryCta}>
-              Explore the factory
-            </a>
+            {c.primaryCta.label && (
+              <a href={c.primaryCta.href || '#'} className={styles.primaryCta}>
+                {c.primaryCta.label}
+              </a>
+            )}
+            {c.secondaryCta.label && (
+              <a href={c.secondaryCta.href || '#'} className={styles.secondaryCta}>
+                {c.secondaryCta.label}
+              </a>
+            )}
           </div>
-          <p className={styles.hint}>
-            We aim to respond to serious enquiries within one working day.
-          </p>
+          {c.hint && <p className={styles.hint}>{c.hint}</p>}
         </div>
       </div>
     </section>

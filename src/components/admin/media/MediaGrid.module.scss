@@ -1,0 +1,262 @@
+@use '../../../styles/adminForm' as *;
+
+.wrap {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.search {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  svg {
+    position: absolute;
+    left: 0.7rem;
+    color: var(--admin-muted);
+  }
+
+  input {
+    @include admin-control;
+    padding-left: 2.1rem;
+  }
+}
+
+.uploadBtn {
+  @include admin-primary-button;
+}
+
+.warn,
+.error {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.warn {
+  background: var(--admin-warn-bg);
+  color: var(--admin-warn);
+}
+
+.error {
+  background: var(--admin-err-bg);
+  color: var(--admin-err);
+}
+
+.drop {
+  border: 2px dashed transparent;
+  border-radius: 14px;
+  padding: 0.25rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.dragging {
+  border-color: var(--admin-accent);
+  background: var(--admin-accent-soft);
+}
+
+.uploading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  color: var(--admin-muted);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.7rem;
+}
+
+.tile {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border-radius: 12px;
+  border: 1px solid var(--admin-line);
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+
+  img,
+  .doc {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 8px;
+    background:
+      repeating-conic-gradient(#f2f4f7 0% 25%, #fff 0% 50%) 50% / 16px 16px;
+  }
+
+  &:hover {
+    border-color: var(--admin-accent);
+  }
+}
+
+.doc {
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  color: var(--admin-err);
+}
+
+.tileActive {
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 3px var(--admin-accent-soft);
+}
+
+.tileName {
+  font-size: 0.75rem;
+  color: var(--admin-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  padding: 3rem 1rem;
+  color: var(--admin-muted);
+  text-align: center;
+
+  svg {
+    font-size: 44px;
+  }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  button {
+    @include admin-ghost-button;
+  }
+}
+
+.dropHint {
+  margin: 0.8rem 0 0;
+  font-size: 0.78rem;
+  color: var(--admin-muted);
+  text-align: center;
+}
+
+/* ---------- details drawer ---------- */
+.details {
+  position: fixed;
+  top: 76px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 45;
+  width: min(340px, calc(100vw - 32px));
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 1rem;
+  @include admin-card;
+  box-shadow: var(--admin-shadow-2);
+}
+
+.detailsHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.preview {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: var(--admin-soft);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.8rem;
+  margin: 0;
+  font-size: 0.82rem;
+
+  dt {
+    color: var(--admin-muted);
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+
+  span {
+    @include admin-micro-label;
+  }
+
+  input {
+    @include admin-control;
+  }
+}
+
+.detailActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.saveBtn {
+  @include admin-primary-button;
+}
+
+.copyBtn {
+  @include admin-ghost-button;
+}
+
+.deleteBtn {
+  @include admin-ghost-button;
+  margin-left: auto;
+
+  &:hover:not(:disabled) {
+    border-color: var(--admin-err);
+    color: var(--admin-err);
+  }
+}

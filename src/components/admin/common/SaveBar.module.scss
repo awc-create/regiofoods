@@ -1,0 +1,119 @@
+.bar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding: 0.7rem 0.8rem 0.7rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--admin-line);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--admin-shadow-2);
+  transition: border-color 0.2s ease;
+}
+
+.isDirty {
+  border-color: var(--admin-accent);
+}
+
+.isError {
+  border-color: var(--admin-err);
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: 999px;
+  background: var(--admin-ok);
+}
+
+.isDirty .dot {
+  background: var(--admin-accent);
+  box-shadow: 0 0 0 4px var(--admin-accent-soft);
+}
+
+.isError .dot {
+  background: var(--admin-err);
+}
+
+.stateText {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+
+  strong {
+    font-size: 0.86rem;
+    font-weight: 700;
+  }
+
+  small {
+    font-size: 0.76rem;
+    color: var(--admin-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.isError .stateText small {
+  color: var(--admin-err);
+  white-space: normal;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex: none;
+}
+
+.discard {
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid var(--admin-line-strong);
+  background: #fff;
+  padding: 0.55rem 1rem;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.save {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.6rem 1.35rem;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.86rem;
+  background: var(--admin-accent);
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: var(--admin-accent-hover);
+  }
+
+  &:disabled {
+    cursor: default;
+    background: var(--admin-soft);
+    color: var(--admin-muted);
+    border-color: var(--admin-line);
+  }
+}
+
+@media (max-width: 620px) {
+  .stateText small {
+    display: none;
+  }
+}

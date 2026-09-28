@@ -1,0 +1,110 @@
+// Regio Foods — content + catalogue database
+// Admin panel pattern follows Essentia (auth, save bar) and Prince Foods (products, S3 media).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+/// Admin users. Only role "admin" can sign in to the admin panel.
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  role         String   @default("admin")
+  passwordHash String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+/// Every editable page section is one row: key = "home.hero", value = JSON.
+/// Field definitions and defaults live in src/content/sections/*.
+model ContentBlock {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+  updatedBy String?
+}
+
+/// Uploaded images (stored in Hetzner Object Storage).
+model Media {
+  id        String   @id @default(cuid())
+  url       String   @unique
+  objectKey String?
+  name      String
+  alt       String?
+  size      Int      @default(0)
+  type      String   @default("image")
+  folder    String   @default("general")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([folder])
+}
+
+/// Two-level categories: parent tabs (Frozen, Groceries, Snacks…) and sub-categories.
+model Category {
+  id        String     @id @default(cuid())
+  name      String
+  slug      String     @unique
+  parentId  String?
+  parent    Category?  @relation("CategoryTree", fields: [parentId], references: [id], onDelete: Cascade)
+  children  Category[] @relation("CategoryTree")
+  sortOrder Int        @default(0)
+  visible   Boolean    @default(true)
+  products  Product[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([parentId, sortOrder])
+}
+
+model Product {
+  id          String           @id @default(cuid())
+  slug        String           @unique
+  name        String
+  description String           @default("")
+  categoryId  String?
+  category    Category?        @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  visible     Boolean          @default(true)
+  featured    Boolean          @default(false)
+  sortOrder   Int              @default(0)
+  variants    ProductVariant[]
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  @@index([categoryId])
+  @@index([visible])
+}
+
+model ProductVariant {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String  @default("")
+  packSize  String  @default("")
+  imageUrl  String  @default("")
+  sortOrder Int     @default(0)
+
+  @@index([productId, sortOrder])
+}
+
+/// Messages sent from the website contact forms.
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String
+  source    String   @default("contact")
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}

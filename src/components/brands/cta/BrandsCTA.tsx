@@ -1,26 +1,30 @@
 import Link from 'next/link';
+import type { brandsCta } from '@/content/sections/brands';
 import styles from './BrandsCTA.module.scss';
 
-export default function BrandsCTA() {
+type Props = { content: typeof brandsCta.defaults };
+
+export default function BrandsCTA({ content: c }: Props) {
   return (
     <section className={styles.section} aria-labelledby="brands-cta-heading">
       <div className={styles.inner}>
         <div className={styles.panel}>
           <h2 id="brands-cta-heading" className={styles.heading}>
-            Want a brand catalogue for your market?
+            {c.heading}
           </h2>
-          <p className={styles.text}>
-            We can share product lists, available formats, and the right range for your buyer
-            profile.
-          </p>
+          {c.intro && <p className={styles.text}>{c.intro}</p>}
 
           <div className={styles.actions}>
-            <Link href="/contact" className={styles.primary}>
-              Request catalogue
-            </Link>
-            <Link href="/products" className={styles.secondary}>
-              Browse products →
-            </Link>
+            {c.primaryCta.label && (
+              <Link href={c.primaryCta.href || '#'} className={styles.primary}>
+                {c.primaryCta.label}
+              </Link>
+            )}
+            {c.secondaryCta.label && (
+              <Link href={c.secondaryCta.href || '#'} className={styles.secondary}>
+                {c.secondaryCta.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>

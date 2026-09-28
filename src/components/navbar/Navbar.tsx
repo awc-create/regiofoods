@@ -9,7 +9,13 @@ import { motion, useAnimationControls, useReducedMotion } from 'framer-motion';
 import styles from './Navbar.module.scss';
 import { NAV_CTA, NAV_LINKS } from '@/config/menu.config';
 
-export default function Navbar() {
+type Props = {
+  logo?: string;
+  siteName?: string;
+  cta?: { label: string; href: string };
+};
+
+export default function Navbar({ logo, siteName = 'Regio Foods', cta = NAV_CTA }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -42,7 +48,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link href="/" className={styles.logo} aria-label="Regio Foods">
+        <Link href="/" className={styles.logo} aria-label={siteName}>
           <motion.div
             className={styles.logoWrap}
             initial={reduceMotion ? undefined : { opacity: 0, y: 6, scale: 0.98 }}
@@ -56,10 +62,9 @@ export default function Navbar() {
             }
             onHoverStart={handleLogoHoverStart}
           >
-            {/* Keep the file at /public/regiofoods-logo.svg */}
             <Image
-              src="/assets/regiofoods-logo.svg"
-              alt="Regio Foods"
+              src={logo || '/assets/regiofoods-logo.svg'}
+              alt={siteName}
               width={140}
               height={40}
               priority
@@ -94,10 +99,12 @@ export default function Navbar() {
         </div>
 
         {/* CTA (top right) */}
-        <Link href={NAV_CTA.href} className={styles.cta}>
-          {NAV_CTA.label}
-          <Icon icon="mdi:arrow-right" aria-hidden="true" />
-        </Link>
+        {cta.label && (
+          <Link href={cta.href || '/contact'} className={styles.cta}>
+            {cta.label}
+            <Icon icon="mdi:arrow-right" aria-hidden="true" />
+          </Link>
+        )}
 
         {/* Hamburger */}
         <button
@@ -127,9 +134,11 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <Link href={NAV_CTA.href} onClick={closeMenu} className={styles.mobileCta}>
-          {NAV_CTA.label}
-        </Link>
+        {cta.label && (
+          <Link href={cta.href || '/contact'} onClick={closeMenu} className={styles.mobileCta}>
+            {cta.label}
+          </Link>
+        )}
       </div>
     </nav>
   );

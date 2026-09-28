@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local uploads (dev only, when no bucket is configured)
+/public/uploads/
+!.env.example

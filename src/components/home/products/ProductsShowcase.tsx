@@ -9,7 +9,7 @@ export type ProductItem = {
   imageAlt?: string;
   summary: string; // 1–2 lines
   bullets?: string[]; // short feature/spec points
-  slug?: string; // optional link for “Learn more”
+  href?: string; // optional link for “Learn more”
   badge?: string; // e.g., “Frozen”, “Cooked”
 };
 
@@ -36,8 +36,8 @@ export default function ProductsShowcase({
       </div>
 
       <div className={styles.grid}>
-        {items.map((p) => (
-          <article key={p.name} className={styles.card}>
+        {items.map((p, i) => (
+          <article key={`${p.name}-${i}`} className={styles.card}>
             <div className={styles.figure} aria-hidden="true">
               {p.imageSrc ? (
                 <>
@@ -72,8 +72,8 @@ export default function ProductsShowcase({
                 </ul>
               ) : null}
 
-              {p.slug ? (
-                <a className={styles.more} href={`/products/${p.slug}`}>
+              {p.href ? (
+                <a className={styles.more} href={p.href}>
                   Learn more →
                 </a>
               ) : null}

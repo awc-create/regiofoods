@@ -1,13 +1,20 @@
+import type { Metadata } from 'next';
 import '@/styles/Global.scss';
-import Navbar from '@/components/navbar/Navbar';
-import Footer from '@/components/footer/Footer';
+import IconSetup from '@/components/common/IconSetup';
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://regiofoods.in';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: { default: 'Regio Foods', template: '%s' },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <IconSetup />
+        {children}
       </body>
     </html>
   );

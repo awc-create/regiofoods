@@ -1,57 +1,46 @@
 'use client';
 
 import Link from 'next/link';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Icon } from '@iconify/react';
+import type { siteSettings } from '@/content/sections/pages';
 import styles from './Footer.module.scss';
 
-const Footer: React.FC = () => {
+type Props = { site: typeof siteSettings.defaults };
+
+export default function Footer({ site }: Props) {
+  const socials = site.socials.filter((s) => s.url);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Footer Navigation Links */}
         <nav className={styles.footerLinks}>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-of-service">Terms of Service</Link>
+          <Link href="/cookies">Cookie Policy</Link>
           <Link href="/faq">FAQs</Link>
           <Link href="/contact">Contact</Link>
         </nav>
 
-        {/* Social Icons */}
-        <div className={styles.socialIcons}>
-          <a href="#" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-          {/* Example:
-          <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-          */}
+        {socials.length > 0 && (
+          <div className={styles.socialIcons}>
+            {socials.map((s) => (
+              <a
+                key={`${s.platform}-${s.url}`}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.platform}
+              >
+                <Icon icon={s.icon || 'mdi:link-variant'} />
+              </a>
+            ))}
+          </div>
+        )}
 
-          <a href="#" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-          {/* Example:
-          <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-          */}
-
-          <a href="#" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          {/* Example:
-          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          */}
-        </div>
-
-        {/* Copyright */}
         <p className={styles.copyright}>
-          &copy; {new Date().getFullYear()} YourSite. All rights reserved.
+          &copy; {new Date().getFullYear()} {site.copyright || site.siteName}. All rights reserved.
         </p>
 
-        {/* Credit */}
         <p className={styles.credit}>
           Website created by{' '}
           <a href="https://adaptiveworks.net" target="_blank" rel="noopener noreferrer">
@@ -61,6 +50,4 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

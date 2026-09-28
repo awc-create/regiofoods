@@ -1,0 +1,200 @@
+/* =========================================================
+   ADMIN FORM SYSTEM — shared by every admin screen
+   (same idea and class names as the Essentia admin form system)
+
+   Usage at the top of an admin *.module.scss:
+     @use "../../styles/adminForm" as *;
+     @include admin-form-system;
+   ========================================================= */
+
+$admin-radius-md: 10px;
+$admin-radius-sm: 8px;
+
+@mixin admin-control {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.75rem;
+  border-radius: $admin-radius-sm;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--admin-ink);
+  background: #fff;
+  border: 1px solid var(--admin-line-strong);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &::placeholder {
+    color: var(--admin-muted);
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 3px var(--admin-accent-soft);
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+@mixin admin-micro-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--admin-muted);
+}
+
+@mixin admin-primary-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.6rem 1.15rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.86rem;
+  background: var(--admin-accent);
+  color: var(--admin-accent-ink) !important;
+  text-decoration: none;
+  transition: background 0.15s ease, opacity 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--admin-accent-hover);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+@mixin admin-ghost-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--admin-line-strong);
+  background: #fff;
+  color: var(--admin-ink);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+
+  &:hover:not(:disabled) {
+    border-color: var(--admin-accent);
+    color: var(--admin-accent);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+@mixin admin-card {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-line);
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow-1);
+}
+
+@mixin admin-form-system {
+  .section {
+    max-width: 980px;
+
+    > h2 {
+      margin: 0 0 0.2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    > p {
+      margin: 0 0 1.4rem;
+      max-width: 64ch;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--admin-muted);
+    }
+  }
+
+  .form {
+    display: grid;
+    gap: 1rem 1.1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .full {
+    grid-column: 1 / -1;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .label {
+    @include admin-micro-label;
+  }
+
+  .input,
+  .textarea,
+  .select {
+    @include admin-control;
+  }
+
+  .textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.5;
+  }
+
+  .help {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--admin-muted);
+  }
+
+  .primaryBtn {
+    @include admin-primary-button;
+  }
+
+  .ghostBtn {
+    @include admin-ghost-button;
+  }
+
+  .dangerBtn {
+    @include admin-ghost-button;
+
+    &:hover:not(:disabled) {
+      border-color: var(--admin-err);
+      color: var(--admin-err);
+      background: var(--admin-err-bg);
+    }
+  }
+
+  .card {
+    @include admin-card;
+    padding: 1.1rem 1.2rem;
+  }
+
+  @media (max-width: 880px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+  }
+}
