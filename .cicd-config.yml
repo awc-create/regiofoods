@@ -11,4 +11,5 @@ deploy_targets:
   dev: vercel
   preview: vercel
 
+pgadmin_subdomain: dbui
 pgadmin_subdomain: db
