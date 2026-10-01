@@ -20,11 +20,25 @@ export const authOptions: NextAuthOptions = {
         const password = creds?.password;
         if (!email || !password) return null;
 
-        const user = await prisma.user.findUnique({ where: { email } });
-        if (!user?.passwordHash) return null;
+        let user;
+        try {
+          user = await prisma.user.findUnique({ where: { email } });
+        } catch (err) {
+          console.error('[auth] database error during sign-in:', err);
+          throw new Error('DatabaseUnavailable');
+        }
+        if (!user?.passwordHash) {
+          console.warn(
+            `[auth] sign-in failed for ${email}: ${user ? 'account has no password' : 'no such account'}`
+          );
+          return null;
+        }
 
         const ok = await compare(password, user.passwordHash);
-        if (!ok) return null;
+        if (!ok) {
+          console.warn(`[auth] sign-in failed for ${email}: wrong password`);
+          return null;
+        }
 
         return {
           id: user.id,

@@ -20,12 +20,13 @@ if (password.length < 10) {
 }
 
 // --keep-password: create the admin if missing, but never change an existing password.
+// (An existing account with NO password, e.g. made by a generic seed, still gets one.)
 const keepPassword = process.argv.includes('--keep-password');
 
 const prisma = new PrismaClient();
 const existing = await prisma.user.findUnique({ where: { email } });
 
-if (existing && keepPassword) {
+if (existing && keepPassword && existing.passwordHash) {
   if (existing.role !== 'admin')
     await prisma.user.update({ where: { email }, data: { role: 'admin' } });
   console.log(`Admin already exists: ${email} (password left unchanged)`);

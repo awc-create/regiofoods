@@ -38,8 +38,17 @@ export default function SignInClient() {
       const data = await res.json().catch(() => ({}));
       setLoading(false);
 
-      if (!res.ok || data.error || String(data.url ?? '').includes('error=')) {
-        setErr('Email or password is not correct.');
+      const errorCode =
+        data.error ||
+        new URL(String(data.url ?? ''), window.location.origin).searchParams.get('error');
+      if (!res.ok || errorCode) {
+        // CredentialsSignin = wrong email/password. Anything else is a server problem
+        // (e.g. the database is unreachable) and should not look like a typo.
+        setErr(
+          !errorCode || errorCode === 'CredentialsSignin'
+            ? 'Email or password is not correct.'
+            : 'Sign-in is not working right now (server error). Please contact AWC.'
+        );
         return;
       }
 
