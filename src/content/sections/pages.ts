@@ -300,7 +300,7 @@ export const siteSettings = defineSection({
   defaults: {
     siteName: 'Regio Foods',
     logo: '/assets/regiofoods-logo.svg',
-    email: 'info@regiofoods.com',
+    email: 'info@regiofoods.in',
     phone: '+91 98765 43210',
     address: 'C-3430, Green Fields Colony, Sector 43, Faridabad, Haryana, India',
     headerCta: { label: 'Get a Quote', href: '/contact' },
