@@ -19,14 +19,24 @@ if (password.length < 10) {
   process.exit(1);
 }
 
+// --keep-password: create the admin if missing, but never change an existing password.
+const keepPassword = process.argv.includes('--keep-password');
+
 const prisma = new PrismaClient();
-const passwordHash = await bcrypt.hash(password, 12);
+const existing = await prisma.user.findUnique({ where: { email } });
 
-const user = await prisma.user.upsert({
-  where: { email },
-  create: { email, name, role: 'admin', passwordHash },
-  update: { role: 'admin', passwordHash, ...(name ? { name } : {}) },
-});
+if (existing && keepPassword) {
+  if (existing.role !== 'admin')
+    await prisma.user.update({ where: { email }, data: { role: 'admin' } });
+  console.log(`Admin already exists: ${email} (password left unchanged)`);
+} else {
+  const passwordHash = await bcrypt.hash(password, 12);
+  const user = await prisma.user.upsert({
+    where: { email },
+    create: { email, name, role: 'admin', passwordHash },
+    update: { role: 'admin', passwordHash, ...(name ? { name } : {}) },
+  });
+  console.log(`Admin ready: ${user.email}`);
+}
 
-console.log(`Admin ready: ${user.email}`);
 await prisma.$disconnect();

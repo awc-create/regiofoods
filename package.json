@@ -59,5 +59,8 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "prisma": {
+    "seed": "node scripts/seed.mjs"
   }
 }
